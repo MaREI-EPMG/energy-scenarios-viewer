@@ -7,7 +7,7 @@ function Content(props) {
   return (
     <Col as="main">
       <Routes>
-        <Route path="/charts/*" element={<MobileMenu {...props} />} />
+        <Route path="/results/*" element={<MobileMenu {...props} />} />
       </Routes>
 
       {props.contentNavs.map((nav, index) => (
