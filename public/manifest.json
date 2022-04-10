@@ -1,6 +1,6 @@
 {
-  "short_name": "Energy Charts",
-  "name": "Energy Charts App",
+  "short_name": "Energy Scenarios Viewer",
+  "name": "EPMG Energy Scenarios Viewer App",
   "icons": [
     {
       "src": "favicon.ico",
