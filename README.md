@@ -1,44 +1,7 @@
-# Energy Charts
+# Energy Scenarios Viewer
 
-[![license](https://img.shields.io/github/license/facilitate-energy/energy-charts?color=blueviolet)](LICENSE)
+This web app displays energy scenario results from public [EPMG repositories][EPMG on GitHub] on GitHub. It is based on [Energy Charts][Energy Charts]. Branch `energy-charts-main` in this repository is a copy of `main` branch in [Energy Charts repository][Energy Charts GitHub repository]; it is used to make updating Energy Scenarios Viewer easier.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Purpose
-
-Energy Charts is a web application developed to:
-- make it easier to communicate energy modelling results and scenarios to stakeholders;
-- facilitate discussion of energy modelling results and make model debugging easier;
-- disseminate energy modelling results and scenarios to a wide audience.
-
-## To Run Locally
-
-After cloning, execute from within the repository:
-
-`npm install`
-
-Followed by:
-
-`npm start`
-
-Requires [Node.js](https://nodejs.org).
-
-## To Deploy
-
-Follow this [guide](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) to deploy on Netlify.
-
-## To Customise
-
-- **Scenario data** is located in `public/data`
-- Mardown files to be rendered as **Pages** are in `public/pages`
-- **Routes** and other configuration settings are in `src/config.js`
-- Charts' **specs** are in `src/specs/chartsInfo.js`. These also act as filters.
-
-## License
-
-Copyright 2021-2022 Facilitate Energy Ltd.
-
-Energy Charts is licensed under the Apache License, Version 2.0.
-
-You may obtain a copy of the License [here](/LICENSE) or at http://www.apache.org/licenses/LICENSE-2.0.
-
+[EPMG on GitHub]: https://github.com/MaREI-EPMG
+[Energy Charts]: https://energy-charts.netlify.app/
+[Energy Charts GitHub repository]: https://github.com/facilitate-energy/energy-charts
