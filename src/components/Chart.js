@@ -14,6 +14,11 @@ import useFetch from "../hooks/useFetch";
 import calculateDifference from "../utils/calculateDifference";
 import normaliseData from "../utils/normaliseData";
 
+
+function formatLegendNumber(datum) {
+    return datum.toPrecision(3);
+}
+
 function Chart(props) {
   const {
     selectedScenarios,
@@ -112,8 +117,8 @@ function Chart(props) {
                         ${datum[0]}
                         ${
                           seriesTitles[series.seriesName] || series.seriesName
-                        }: ${datum[1]} ${unit}
-                        Total: ${getTotal(scenario.data, datum[0])} ${unit}`
+                        }: ${formatLegendNumber(datum[1])} ${unit}
+                        Total: ${formatLegendNumber(getTotal(scenario.data, datum[0]))} ${unit}`
                       }
                       x={0}
                       y={1}
