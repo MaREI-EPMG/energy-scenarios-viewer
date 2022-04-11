@@ -16,7 +16,7 @@ import normaliseData from "../utils/normaliseData";
 
 
 function formatLegendNumber(datum) {
-    return datum.toPrecision(3);
+    return Intl.NumberFormat("en-IE", {maximumSignificantDigits: 3}).format(datum);
 }
 
 function Chart(props) {
