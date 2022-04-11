@@ -7,7 +7,14 @@ function FooterCredits(props) {
       <Row className="pt-2">
         <Col className="text-center">
           <small>
-            <span className="text-muted"> {"Developed by "} </span>
+            <span className="text-muted">{"Based on "}</span>
+            <a
+              href="https://energy-charts.netlify.app"
+              className="text-reset text-decoration-none"
+            >
+              Energy Charts
+            </a>
+            <span className="text-muted">{" developed by "}</span>
             <a
               href="https://facilitate.energy"
               className="text-reset text-decoration-none"
@@ -20,12 +27,7 @@ function FooterCredits(props) {
       <Row className="pb-2">
         <Col className="text-center">
           <small>
-            <a
-              href="https://energy-charts.netlify.app"
-              className="text-reset text-decoration-none"
-            >
-              Energy Charts
-            </a>{" "}
+            <span className="text-muted">{"Energy Charts "}</span>
             <a
               href="https://github.com/facilitate-energy/energy-charts"
               className="text-reset text-decoration-none"
