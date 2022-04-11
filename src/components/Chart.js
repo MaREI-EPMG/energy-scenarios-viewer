@@ -40,6 +40,12 @@ function Chart(props) {
     (scenario) => scenario && `/data/${scenario}/${chartName}.json`
   );
 
+  let xPeriods = ("xPeriods" in props) ? props["xPeriods"] : xGridMarks;
+
+  const width = 600;
+
+  let barWidth = Math.round(0.7 * width / (selectedScenarios[1] ? 2 : 1) / xPeriods.length);
+    
   let mainScenarioData = useFetch(urls[0]);
   let compareScenarioData = useFetch(urls[1]);
 
@@ -47,14 +53,14 @@ function Chart(props) {
     mainScenarioData,
     selectedScenarios[0],
     seriesNames,
-    xGridMarks
+    xPeriods
   );
 
   compareScenarioData = normaliseData(
     compareScenarioData,
     selectedScenarios[1],
     seriesNames,
-    xGridMarks
+    xPeriods
   );
 
   const chartData =
@@ -73,8 +79,9 @@ function Chart(props) {
 
   return (
     <>
-      <VictoryChart
-        domainPadding={{ x: 20 }}
+      <VictoryChart  width={width}
+        padding={{ left: 60, right: 10, top: 30, bottom: 30 }}
+        domainPadding={{ x: barWidth+4 }}
         domain={chartDomain}
         containerComponent={
           <VictoryContainer
@@ -93,15 +100,16 @@ function Chart(props) {
         <VictoryAxis
           dependentAxis
           label={unit}
-          axisLabelComponent={<VictoryLabel y={35} x={30} angle={0} />}
+          axisLabelComponent={<VictoryLabel y={20} x={30} angle={0} />}
         />
-        <VictoryGroup offset={20}>
+        <VictoryGroup offset={barWidth+2}>
           {chartData.map(
             (scenario, idx) =>
               scenario && (
                 <VictoryStack key={idx}>
                   {scenario.data.map((series, idx) => (
                     <VictoryBar
+                      barWidth={barWidth}
                       key={idx}
                       data={series.seriesValues}
                       labels={({ datum }) =>
