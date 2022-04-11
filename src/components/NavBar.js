@@ -17,7 +17,7 @@ function NavBar(props) {
       expanded={expandNavbar}
     >
       <Container>
-        <Navbar.Brand href="/">Energy Charts</Navbar.Brand>
+        <Navbar.Brand href="/">Energy Scenarios</Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => setExpandNavbar(!expandNavbar)}

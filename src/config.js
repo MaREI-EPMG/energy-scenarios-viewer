@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 
 const Charts = React.lazy(() => import("./components/Charts"));
 const Page = React.lazy(() => import("./components/Page"));
+const IndexPage = React.lazy(() => import("./components/IndexPage"));
 const PageNotFound = React.lazy(() => import("./components/NotFound"));
 
 const config = {
@@ -26,6 +27,10 @@ const config = {
   ],
   defaultScenarioGroup: "Scenario 1",
   routes: [
+    {
+      path: "/",
+      component: IndexPage
+    },
     {
       path: "/about",
       component: Page,
@@ -261,11 +266,6 @@ const config = {
       path: "/results/",
       component: Navigate,
       props: { replace: true, to: "/results/overview/emissions-and-cost" }
-    },
-    {
-      path: "/",
-      component: Navigate,
-      props: { replace: true, to: "/about" }
     },
     {
       path: "*",
