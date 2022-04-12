@@ -52,6 +52,7 @@ const chartsInfo = {
     "unit": "kt",
     "maxY": 49540,
     "minY": -5459,
+    "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 60
   },
