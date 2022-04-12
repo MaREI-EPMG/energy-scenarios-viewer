@@ -81,7 +81,7 @@ function Chart(props) {
     <>
       <VictoryChart  width={width}
         padding={{ left: 60, right: 10, top: 30, bottom: 30 }}
-        domainPadding={{ x: barWidth+4 }}
+        domainPadding={{ x: barWidth * (selectedScenarios[1] ? 1.3 : 0.8)}}
         domain={chartDomain}
         containerComponent={
           <VictoryContainer
@@ -102,7 +102,7 @@ function Chart(props) {
           label={unit}
           axisLabelComponent={<VictoryLabel y={20} x={30} angle={0} />}
         />
-        <VictoryGroup offset={barWidth+2}>
+        <VictoryGroup offset={barWidth+1}>
           {chartData.map(
             (scenario, idx) =>
               scenario && (
