@@ -26,36 +26,47 @@ function Chart(props) {
     unit,
     maxY,
     minY,
-    xGridMarks
+    xGridMarks,
+    basePath,
+    cache
   } = props;
 
   const chartDomain = showDifference ? null : { y: [minY, maxY] };
 
   const urls = selectedScenarios.map(
-    (scenario) => scenario && `/data/${scenario}/${chartName}.json`
+    (scenario) => scenario && `${basePath}/${scenario}/${chartName}.json`
   );
 
-  let mainScenarioData = useFetch(urls[0]);
-  let compareScenarioData = useFetch(urls[1]);
-
-  mainScenarioData = normaliseData(
-    mainScenarioData,
-    selectedScenarios[0],
-    seriesNames,
-    xGridMarks
+  let [mainScenarioDataLoading, mainScenarioData] = useFetch(urls[0], cache);
+  let [compareScenarioDataLoading, compareScenarioData] = useFetch(
+    urls[1],
+    cache
   );
 
-  compareScenarioData = normaliseData(
-    compareScenarioData,
-    selectedScenarios[1],
-    seriesNames,
-    xGridMarks
-  );
+  if (!mainScenarioDataLoading) {
+    mainScenarioData = normaliseData(
+      mainScenarioData,
+      selectedScenarios[0],
+      seriesNames,
+      xGridMarks
+    );
+  }
+
+  if (!compareScenarioDataLoading) {
+    compareScenarioData = normaliseData(
+      compareScenarioData,
+      selectedScenarios[1],
+      seriesNames,
+      xGridMarks
+    );
+  }
 
   const chartData =
-    showDifference && selectedScenarios[1]
-      ? [calculateDifference([mainScenarioData, compareScenarioData])]
-      : [mainScenarioData, compareScenarioData];
+    !mainScenarioDataLoading && !compareScenarioDataLoading
+      ? showDifference && selectedScenarios[1]
+        ? [calculateDifference([mainScenarioData, compareScenarioData])]
+        : [mainScenarioData, compareScenarioData]
+      : [];
 
   const getTotal = (data, period) => {
     return data.reduce((total, currentSeries) => {
@@ -90,47 +101,49 @@ function Chart(props) {
           label={unit}
           axisLabelComponent={<VictoryLabel y={35} x={30} angle={0} />}
         />
-        <VictoryGroup offset={20}>
-          {chartData.map(
-            (scenario, idx) =>
-              scenario && (
-                <VictoryStack key={idx}>
-                  {scenario.data.map((series, idx) => (
-                    <VictoryBar
-                      key={idx}
-                      data={series.seriesValues}
-                      labels={({ datum }) =>
-                        `${
-                          showDifference
-                            ? (scenarioTitles[scenario.name[0]] ||
-                                scenario.name[0]) +
-                                " - " +
-                                scenarioTitles[scenario.name[1]] ||
-                              scenario.name[1]
-                            : scenarioTitles[scenario.name] || scenario.name
-                        }
+        {!mainScenarioDataLoading && !compareScenarioDataLoading && (
+          <VictoryGroup offset={20}>
+            {chartData.map(
+              (scenario, idx) =>
+                scenario && (
+                  <VictoryStack key={idx}>
+                    {scenario.data.map((series, idx) => (
+                      <VictoryBar
+                        key={idx}
+                        data={series.seriesValues}
+                        labels={({ datum }) =>
+                          `${
+                            showDifference
+                              ? (scenarioTitles[scenario.name[0]] ||
+                                  scenario.name[0]) +
+                                  " - " +
+                                  scenarioTitles[scenario.name[1]] ||
+                                scenario.name[1]
+                              : scenarioTitles[scenario.name] || scenario.name
+                          }
                         ${datum[0]}
                         ${
                           seriesTitles[series.seriesName] || series.seriesName
                         }: ${datum[1]} ${unit}
                         Total: ${getTotal(scenario.data, datum[0])} ${unit}`
-                      }
-                      x={0}
-                      y={1}
-                      labelComponent={<VictoryTooltip />}
-                      style={{
-                        data: {
-                          fill: colorScale[
-                            seriesNames.indexOf(series.seriesName)
-                          ]
                         }
-                      }}
-                    />
-                  ))}
-                </VictoryStack>
-              )
-          )}
-        </VictoryGroup>
+                        x={0}
+                        y={1}
+                        labelComponent={<VictoryTooltip />}
+                        style={{
+                          data: {
+                            fill: colorScale[
+                              seriesNames.indexOf(series.seriesName)
+                            ]
+                          }
+                        }}
+                      />
+                    ))}
+                  </VictoryStack>
+                )
+            )}
+          </VictoryGroup>
+        )}
       </VictoryChart>
     </>
   );

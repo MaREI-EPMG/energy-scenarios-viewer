@@ -22,6 +22,8 @@ function Charts(props) {
               scenarioTitles={scenarioTitles}
               showDifference={props.showDifference}
               seriesTitles={seriesTitles}
+              basePath={`${props.basePath}/data`}
+              cache={props.cache}
               {...chartsInfo[chart]}
             />
             <Card.Footer>
