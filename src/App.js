@@ -1,13 +1,26 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Layout } from "./containers";
-import config from "./config";
+import configuration from "./config";
 
 function App() {
+  const [basePath, setBasePath] = useState("");
+
+  const config = {
+    scenarios: configuration.studies.find(
+      (study) => study.basePath === basePath
+    ).scenarios,
+    defaultScenarioGroup: configuration.defaultScenarioGroups.find(
+      (defaultScenarioGroup) => defaultScenarioGroup.basePath === basePath
+    ).scenarioName,
+    routes: configuration.routes,
+    routeWithSidebar: configuration.routeWithSidebar,
+    contentNavs: configuration.contentNavs,
+    headerNavLinks: configuration.headerNavLinks
+  };
+
   const [mainScenario, setMainScenario] = useState(config.defaultScenarioGroup);
   const [compareScenario, setCompareScenario] = useState(null);
   const [showDifference, setShowDifference] = useState(false);
-  const [basePath, setBasePath] = useState("");
-
   const cache = useRef({});
 
   useEffect(() => {
@@ -15,6 +28,14 @@ function App() {
       setShowDifference(false);
     }
   }, [compareScenario]);
+
+  useEffect(() => {
+    setMainScenario(
+      configuration.defaultScenarioGroups.find(
+        (defaultScenarioGroup) => defaultScenarioGroup.basePath === basePath
+      ).scenarioName
+    );
+  }, [basePath]);
 
   return (
     <Layout
