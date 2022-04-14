@@ -1,31 +1,42 @@
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import useFetchData from "../hooks/useFetch";
+import ActivateButton from "./ActivateButton";
 
 function IndexPage(props) {
-  const [isLoading, repositories] = useFetchData(
-    `https://api.github.com/orgs/MaREI-EPMG/repos`,
+  const topic = "tim-scenario";
+  const org = "MaREI-EPMG";
+
+  const [isRepositoriesLoading, repositories] = useFetchData(
+    `https://api.github.com/orgs/${org}/repos`,
     props.cache
   );
+
+  const dataRepositories = isRepositoriesLoading
+    ? null
+    : repositories.filter((repository) => {
+        return repository.topics.includes(topic) && repository.has_pages;
+      });
 
   return (
     repositories && (
       <Row xs={"auto"} className="charts py-2 justify-content-center">
-        {!isLoading &&
-          repositories.map(
-            (repository, idx) =>
-              repository.topics.includes("tim-scenario") && (
-                <Col className="p-2" key={idx}>
-                  <Card>
-                    <Card.Header>{repository.name}</Card.Header>
-                    <Card.Body>{repository.description}</Card.Body>
-                    <Card.Footer>
-                      <a href={repository.html_url}>{repository.html_url}</a>
-                    </Card.Footer>
-                  </Card>
-                </Col>
-              )
-          )}
+        {dataRepositories &&
+          dataRepositories.map((repository, idx) => (
+            <Col className="p-2" key={idx}>
+              <Card>
+                <Card.Header>{repository.name}</Card.Header>
+                <Card.Body>{repository.description}</Card.Body>
+                <Card.Footer>
+                  <ActivateButton
+                    setBasePath={props.setBasePath}
+                    org={org}
+                    repository={repository.name}
+                  />
+                </Card.Footer>
+              </Card>
+            </Col>
+          ))}
       </Row>
     )
   );
