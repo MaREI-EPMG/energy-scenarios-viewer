@@ -114,7 +114,7 @@ const studies = [
         variants: [{ name: "Mitigation_CAP21_A51E51-H2Imp", "specs": null }]
       },
       {
-        name: "Mitigation_CAP21_A51E51-BioImp",
+        name: "Mitigation_CAP21_A51E51-highREN",
         variants: [{ name: "Mitigation_CAP21_A51E51-highREN", "specs": null }]
       },
       {
