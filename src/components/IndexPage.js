@@ -15,7 +15,7 @@ function IndexPage(props) {
   const dataRepositories = isRepositoriesLoading
     ? null
     : repositories.filter((repository) => {
-        return repository.topics.includes(topic);
+        return repository.topics.includes(topic) && repository.has_pages;
       });
 
   return (
@@ -30,7 +30,6 @@ function IndexPage(props) {
                 <Card.Footer>
                   <ActivateButton
                     setBasePath={props.setBasePath}
-                    cache={props.cache}
                     org={org}
                     repository={repository.name}
                   />
