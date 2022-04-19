@@ -1,46 +1,67 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import { Content, Footer, Header, Sidebar } from "../containers";
 import { PageLoading } from "../components";
 
 function Layout(props) {
-  const scenarioList = props.scenarios.map((scenario) => scenario.name);
+  const {
+    defaultScenarioGroup,
+    scenarios,
+    routeWithSidebar,
+    routes,
+    basePath,
+    cache,
+    contentNavs,
+    headerNavLinks
+  } = props;
+
+  const [mainScenario, setMainScenario] = useState(defaultScenarioGroup);
+  const [compareScenario, setCompareScenario] = useState(null);
+  const [showDifference, setShowDifference] = useState(false);
+
+  useEffect(() => {
+    if (!compareScenario) {
+      setShowDifference(false);
+    }
+  }, [compareScenario]);
+
+  const scenarioList = scenarios.map((scenario) => scenario.name);
+  const selectedScenarios = [mainScenario, compareScenario];
 
   return (
     <Container fluid="ms" className="vh-100 d-flex flex-column">
       <Row as="header" className="mb-auto mx-0">
-        <Header navLinks={props.headerNavLinks} />
+        <Header navLinks={headerNavLinks} />
       </Row>
       <Suspense fallback={<PageLoading />}>
         <Row className="mx-0 my-2">
           <Routes>
             <Route
-              path={props.routeWithSidebar}
+              path={routeWithSidebar}
               element={
                 <Sidebar
                   scenarioList={scenarioList}
-                  selectedScenarios={props.selectedScenarios}
-                  showDifference={props.showDifference}
-                  setMainScenario={props.setMainScenario}
-                  setCompareScenario={props.setCompareScenario}
-                  setShowDifference={props.setShowDifference}
+                  selectedScenarios={selectedScenarios}
+                  showDifference={showDifference}
+                  setMainScenario={setMainScenario}
+                  setCompareScenario={setCompareScenario}
+                  setShowDifference={setShowDifference}
                 />
               }
             />
           </Routes>
           <Content
-            routes={props.routes}
+            routes={routes}
+            basePath={basePath}
+            cache={cache}
+            contentNavs={contentNavs}
             scenarioList={scenarioList}
-            basePath={props.basePath}
-            cache={props.cache}
-            selectedScenarios={props.selectedScenarios}
-            showDifference={props.showDifference}
-            setBasePath={props.setBasePath}
-            setMainScenario={props.setMainScenario}
-            setCompareScenario={props.setCompareScenario}
-            setShowDifference={props.setShowDifference}
-            contentNavs={props.contentNavs}
+            selectedScenarios={selectedScenarios}
+            showDifference={showDifference}
+            setMainScenario={setMainScenario}
+            setCompareScenario={setCompareScenario}
+            setShowDifference={setShowDifference}
           />
         </Row>
       </Suspense>
