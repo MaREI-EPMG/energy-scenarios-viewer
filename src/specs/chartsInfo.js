@@ -1,3 +1,6 @@
+const xGridMarks = [2020, 2025, 2030, 2035, 2040, 2045, 2050];
+const xPeriods = [...Array(31)].map((_, i) => 2020 + i);
+
 const chartsInfo = {
   "AGR_FEC": {
     "seriesNames": [
@@ -23,7 +26,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 11,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_Emissions_CO2_Domestic": {
@@ -48,7 +52,8 @@ const chartsInfo = {
     "unit": "kt",
     "maxY": 49540,
     "minY": -5459,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_DACS": {
@@ -57,7 +62,8 @@ const chartsInfo = {
     "unit": "kt",
     "maxY": 1085,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "IND_Emissions-CO2": {
@@ -96,7 +102,8 @@ const chartsInfo = {
     "unit": "kt",
     "maxY": 10231,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 210,
     "itemsPerRow": 2
   },
@@ -106,7 +113,8 @@ const chartsInfo = {
     "unit": "kUnits",
     "maxY": 2911,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "RSD_BLD-N_TYPE": {
@@ -115,7 +123,8 @@ const chartsInfo = {
     "unit": "kDwellings",
     "maxY": 170,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SRV_FEC_Service": {
@@ -150,7 +159,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 178,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "TRA_Freight_Land_Mode": {
@@ -164,7 +174,8 @@ const chartsInfo = {
     "unit": "Btkm",
     "maxY": 40,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_F-HTRUCK-N_TYPE": {
@@ -178,7 +189,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 40,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_F-HTRUCK_TYPE": {
@@ -192,7 +204,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 73,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA-Land_LumpInv": {
@@ -201,7 +214,8 @@ const chartsInfo = {
     "unit": "MEUR",
     "maxY": 37469,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_Emissions-CO2": {
@@ -226,7 +240,8 @@ const chartsInfo = {
     "unit": "kt",
     "maxY": 16264,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "TRA_F-LTRUCK-N_TYPE": {
@@ -240,7 +255,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 374,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_F-LTRUCK_TYPE": {
@@ -254,7 +270,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 797,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_F-MTRUCK-N_TYPE": {
@@ -268,7 +285,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 20,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_F-MTRUCK_TYPE": {
@@ -282,7 +300,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 37,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_Passenger_Land_Mode": {
@@ -307,7 +326,8 @@ const chartsInfo = {
     "unit": "Bpkm",
     "maxY": 115,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "TRA_Passenger_Land_Mode-M": {
@@ -332,7 +352,8 @@ const chartsInfo = {
     "unit": "Bpkm",
     "maxY": 49,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "TRA_Passenger_Land_Mode-S": {
@@ -355,7 +376,8 @@ const chartsInfo = {
     "unit": "Bpkm",
     "maxY": 23,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "TRA_Passenger_Land_Mode-L": {
@@ -369,7 +391,8 @@ const chartsInfo = {
     "unit": "Bpkm",
     "maxY": 43,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_P-CAR_TYPE": {
@@ -383,7 +406,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 3577,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_P-CAR-N_TYPE": {
@@ -397,7 +421,8 @@ const chartsInfo = {
     "unit": "kVehicles",
     "maxY": 1173,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_CO2Price": {
@@ -406,7 +431,8 @@ const chartsInfo = {
     "unit": "MEUR/kt",
     "maxY": 2,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_Cost_Type": {
@@ -415,7 +441,8 @@ const chartsInfo = {
     "unit": "MEUR",
     "maxY": 34749,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-ELCD_Sector": {
@@ -424,7 +451,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 339,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_FEC-OILDST_Sector": {
@@ -433,7 +461,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 170,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC_Sector": {
@@ -442,7 +471,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 721,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_FEC-LPG_Sector": {
@@ -451,7 +481,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 112,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-BIODST_Sector": {
@@ -460,7 +491,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 35,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-GASNAT_Sector": {
@@ -469,7 +501,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 290,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_FEC-BIOGAS_Sector": {
@@ -478,7 +511,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 58,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-BIOWOOx_Sector": {
@@ -487,7 +521,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 43,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-COA_Sector": {
@@ -496,7 +531,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 24,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-HFO_Sector": {
@@ -505,7 +541,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 15,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-OILKER_Sector": {
@@ -514,7 +551,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 96,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-PEAT_Sector": {
@@ -523,7 +561,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 8,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-H2_Sector": {
@@ -532,7 +571,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 59,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-BIOETH_Sector": {
@@ -541,7 +581,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 8,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-HETD_Sector": {
@@ -550,7 +591,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 4,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_FEC-OILGSL_Sector": {
@@ -559,7 +601,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 35,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SRV-DCs_EH_DH-Grid": {
@@ -568,7 +611,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 6,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SUP_BIODST": {
@@ -593,7 +637,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 35,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SUP_BIOETH": {
@@ -608,7 +653,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 8,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-CAF_FEC": {
@@ -639,7 +685,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 16,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "IND-CON_FEC": {
@@ -666,7 +713,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 8,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-EOE_FEC": {
@@ -693,7 +741,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 27,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-FAB_FEC": {
@@ -728,7 +777,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 38,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "IND-MAE_FEC": {
@@ -755,7 +805,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 2,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-MAP_FEC": {
@@ -786,7 +837,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 26,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "IND-NEM_FEC": {
@@ -813,7 +865,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 2,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-OMA_FEC": {
@@ -842,7 +895,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 6,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "IND-ONM_FEC": {
@@ -881,7 +935,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 28,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "IND-PX4_FEC": {
@@ -908,7 +963,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 3,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-RAP_FEC": {
@@ -935,7 +991,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 1,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-TAP_FEC": {
@@ -962,7 +1019,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 8,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-TEM_FEC": {
@@ -987,7 +1045,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 0,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "IND-WAP_FEC": {
@@ -1016,7 +1075,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 10,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "IND_FEC": {
@@ -1059,7 +1119,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 171,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "SYS_Cost_Sector": {
@@ -1084,7 +1145,8 @@ const chartsInfo = {
     "unit": "MEUR",
     "maxY": 34749,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_LumpInv_Sector": {
@@ -1109,7 +1171,8 @@ const chartsInfo = {
     "unit": "MEUR",
     "maxY": 76702,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "PWR_Cap-N": {
@@ -1144,7 +1207,8 @@ const chartsInfo = {
     "unit": "GW",
     "maxY": 11,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "PWR_Cap": {
@@ -1183,7 +1247,8 @@ const chartsInfo = {
     "unit": "GW",
     "maxY": 51,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "PWR_Emissions-CO2": {
@@ -1208,7 +1273,8 @@ const chartsInfo = {
     "unit": "kt",
     "maxY": 20097,
     "minY": -5543,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "PWR_Gen-ELCC": {
@@ -1247,7 +1313,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 424,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "PWR_Gen-HETC": {
@@ -1256,7 +1323,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 0,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "RSD_WS-DET_NCAP": {
@@ -1291,7 +1359,8 @@ const chartsInfo = {
     "unit": "kUnits",
     "maxY": 379,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "RSD_RTFT-APT_NCAP": {
@@ -1300,7 +1369,8 @@ const chartsInfo = {
     "unit": "kUnits",
     "maxY": 100,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "RSD_RTFT-ATT_NCAP": {
@@ -1309,7 +1379,8 @@ const chartsInfo = {
     "unit": "kUnits",
     "maxY": 138,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "RSD_RTFT-DET_NCAP": {
@@ -1318,7 +1389,8 @@ const chartsInfo = {
     "unit": "kUnits",
     "maxY": 220,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "RSD_WS-APT_NCAP": {
@@ -1333,7 +1405,8 @@ const chartsInfo = {
     "unit": "kUnits",
     "maxY": 283,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "RSD_WS-ATT_NCAP": {
@@ -1368,7 +1441,8 @@ const chartsInfo = {
     "unit": "kUnits",
     "maxY": 497,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "RSD_FEC": {
@@ -1405,7 +1479,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 154,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "RSD_WS-APT_FuelCons": {
@@ -1442,7 +1517,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 14,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "RSD_WS-ATT_FuelCons": {
@@ -1479,7 +1555,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 47,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "RSD_WS-DET_FuelCons": {
@@ -1516,7 +1593,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 71,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "RSD_WaterSpace_FuelCons": {
@@ -1553,7 +1631,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 127,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 120
   },
   "RSD_OtherServices_FuelCons": {
@@ -1562,7 +1641,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 40,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "RSD_RTFT_NRG_SAVINGS": {
@@ -1571,7 +1651,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 16,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "RSD_Services_EnergyCons": {
@@ -1600,7 +1681,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 154,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "RSD_Services_CO2Emissions": {
@@ -1609,7 +1691,8 @@ const chartsInfo = {
     "unit": "kt",
     "maxY": 7673,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SUP_BIOGAS": {
@@ -1624,7 +1707,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 58,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_FEC_Fuel": {
@@ -1653,7 +1737,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 721,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "SYS_FEC_Fuel_2": {
@@ -1682,7 +1767,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 721,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "SYS_NRG-Import": {
@@ -1705,7 +1791,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 678,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_NRG-Ind_Supply": {
@@ -1719,7 +1806,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 597,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SYS_TPED": {
@@ -1746,7 +1834,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 773,
     "minY": -6,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_NRG-Export": {
@@ -1755,7 +1844,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 6,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SUP_HYDROGEN": {
@@ -1764,7 +1854,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 59,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SRV-COM_FEC_WS": {
@@ -1795,7 +1886,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 33,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "SRV_FEC": {
@@ -1830,7 +1922,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 158,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "SRV-PUB_FEC_WS": {
@@ -1859,7 +1952,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 29,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "SRV_FEC_DCs": {
@@ -1868,7 +1962,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 40,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "SRV-DCs_EH": {
@@ -1877,7 +1972,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 24,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_FEC": {
@@ -1910,7 +2006,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 231,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "TRA_Freight_Land_FuelCons": {
@@ -1939,7 +2036,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 112,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 90
   },
   "TRA_OTH_FuelCons": {
@@ -1948,7 +2046,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 22,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "TRA_Passenger_Land_FuelCons": {
@@ -1973,7 +2072,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 103,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 60
   },
   "TRA_TURS_FuelCons": {
@@ -1982,7 +2082,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 11,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_NAV_FuelCons": {
@@ -1991,7 +2092,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 11,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_AVIDOM_FuelCons": {
@@ -2000,7 +2102,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 0,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_AVIINT_FuelCons": {
@@ -2009,7 +2112,8 @@ const chartsInfo = {
     "unit": "PJ",
     "maxY": 63,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   },
   "TRA_Passenger_Land_Distance": {
@@ -2018,7 +2122,8 @@ const chartsInfo = {
     "unit": "Bpkm",
     "maxY": 115,
     "minY": 0,
-    "xGridMarks": [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
     "height": 30
   }
 };

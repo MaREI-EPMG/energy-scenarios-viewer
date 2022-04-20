@@ -14,6 +14,12 @@ import useFetch from "../hooks/useFetch";
 import calculateDifference from "../utils/calculateDifference";
 import normaliseData from "../utils/normaliseData";
 
+function formatLegendNumber(datum) {
+  return Intl.NumberFormat("en-IE", { maximumSignificantDigits: 3 }).format(
+    datum
+  );
+}
+
 function Chart(props) {
   const {
     selectedScenarios,
@@ -37,6 +43,13 @@ function Chart(props) {
     (scenario) => scenario && `${basePath}/${scenario}/${chartName}.json`
   );
 
+  let xPeriods = "xPeriods" in props ? props["xPeriods"] : xGridMarks;
+
+  const width = 600;
+
+  let barWidth = Math.round(
+    (0.7 * width) / (selectedScenarios[1] ? 2 : 1) / xPeriods.length
+  );
   let [mainScenarioDataLoading, mainScenarioData] = useFetch(urls[0], cache);
   let [compareScenarioDataLoading, compareScenarioData] = useFetch(
     urls[1],
@@ -48,7 +61,7 @@ function Chart(props) {
       mainScenarioData,
       selectedScenarios[0],
       seriesNames,
-      xGridMarks
+      xPeriods
     );
   }
 
@@ -57,7 +70,7 @@ function Chart(props) {
       compareScenarioData,
       selectedScenarios[1],
       seriesNames,
-      xGridMarks
+      xPeriods
     );
   }
 
@@ -80,7 +93,9 @@ function Chart(props) {
   return (
     <>
       <VictoryChart
-        domainPadding={{ x: 20 }}
+        width={width}
+        padding={{ left: 60, right: 10, top: 30, bottom: 30 }}
+        domainPadding={{ x: barWidth * (selectedScenarios[1] ? 1.3 : 0.8) }}
         domain={chartDomain}
         containerComponent={
           <VictoryContainer
@@ -99,16 +114,17 @@ function Chart(props) {
         <VictoryAxis
           dependentAxis
           label={unit}
-          axisLabelComponent={<VictoryLabel y={35} x={30} angle={0} />}
+          axisLabelComponent={<VictoryLabel y={20} x={30} angle={0} />}
         />
         {!mainScenarioDataLoading && !compareScenarioDataLoading && (
-          <VictoryGroup offset={20}>
+          <VictoryGroup offset={barWidth + 1}>
             {chartData.map(
               (scenario, idx) =>
                 scenario && (
                   <VictoryStack key={idx}>
                     {scenario.data.map((series, idx) => (
                       <VictoryBar
+                        barWidth={barWidth}
                         key={idx}
                         data={series.seriesValues}
                         labels={({ datum }) =>
@@ -124,8 +140,10 @@ function Chart(props) {
                         ${datum[0]}
                         ${
                           seriesTitles[series.seriesName] || series.seriesName
-                        }: ${datum[1]} ${unit}
-                        Total: ${getTotal(scenario.data, datum[0])} ${unit}`
+                        }: ${formatLegendNumber(datum[1])} ${unit}
+                        Total: ${formatLegendNumber(
+                          getTotal(scenario.data, datum[0])
+                        )} ${unit}`
                         }
                         x={0}
                         y={1}
