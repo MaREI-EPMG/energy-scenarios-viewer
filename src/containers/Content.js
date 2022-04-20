@@ -30,7 +30,6 @@ function Content(props) {
                 cache={props.cache}
                 selectedScenarios={props.selectedScenarios}
                 showDifference={props.showDifference}
-                setBasePath={props.setBasePath}
               />
             }
           />

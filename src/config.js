@@ -3,7 +3,6 @@ import { Navigate } from "react-router-dom";
 
 const Charts = React.lazy(() => import("./components/Charts"));
 const Page = React.lazy(() => import("./components/Page"));
-const IndexPage = React.lazy(() => import("./components/IndexPage"));
 const PageNotFound = React.lazy(() => import("./components/NotFound"));
 
 const studies = [
@@ -135,23 +134,6 @@ const studies = [
         variants: [{ name: "No_Mitigation", "specs": null }]
       }
     ]
-  }
-];
-
-const landingRoutes = [
-  {
-    path: "/",
-    component: IndexPage
-  },
-  {
-    path: "/about",
-    component: Page,
-    props: { page: "about" }
-  },
-  {
-    path: "/studies",
-    component: Page,
-    props: { page: "about" }
   }
 ];
 
@@ -484,7 +466,6 @@ const config = {
   studies: studies,
   defaultScenarioGroups: defaultScenarioNames,
   studyRoutes: studyRoutes,
-  otherRoutes: landingRoutes,
   routeWithSidebar: routeWithSidebar,
   contentNavs: contentNavs,
   headerNavLinks: headerNavLinks

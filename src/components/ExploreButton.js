@@ -1,18 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function ExploreButton(props) {
   return (
-    <>
-      <Link
-        className="btn btn-secondary"
-        to={{
-          pathname: props.url
-        }}
-      >
-        Explore
-      </Link>
-    </>
+    <Button variant="secondary" href={props.url}>
+      Explore
+    </Button>
   );
 }
 

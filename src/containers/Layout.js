@@ -36,21 +36,23 @@ function Layout(props) {
       </Row>
       <Suspense fallback={<PageLoading />}>
         <Row className="mx-0 my-2">
-          <Routes>
-            <Route
-              path={routeWithSidebar}
-              element={
-                <Sidebar
-                  scenarioList={scenarioList}
-                  selectedScenarios={selectedScenarios}
-                  showDifference={showDifference}
-                  setMainScenario={setMainScenario}
-                  setCompareScenario={setCompareScenario}
-                  setShowDifference={setShowDifference}
-                />
-              }
-            />
-          </Routes>
+          {routeWithSidebar && (
+            <Routes>
+              <Route
+                path={routeWithSidebar}
+                element={
+                  <Sidebar
+                    scenarioList={scenarioList}
+                    selectedScenarios={selectedScenarios}
+                    showDifference={showDifference}
+                    setMainScenario={setMainScenario}
+                    setCompareScenario={setCompareScenario}
+                    setShowDifference={setShowDifference}
+                  />
+                }
+              />
+            </Routes>
+          )}
           <Content
             routes={routes}
             basePath={basePath}

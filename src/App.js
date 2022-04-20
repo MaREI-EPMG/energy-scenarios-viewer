@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import { Layout } from "./containers";
+import { Route, Routes } from "react-router-dom";
 import configuration from "./config";
 import useFetch from "./hooks/useFetch";
 
-//      onClick={() => setBasePath(`https://${org}.github.io/${repository}`)}
+const IndexPage = React.lazy(() => import("./components/IndexPage"));
+const Page = React.lazy(() => import("./components/Page"));
 
 function App() {
   const cache = useRef({});
@@ -21,10 +23,23 @@ function App() {
         return repository.topics.includes(topic) && repository.has_pages;
       });
 
+  const otherRoutes = [
+    {
+      path: "/",
+      component: IndexPage,
+      props: { repositories: dataRepositories }
+    },
+    {
+      path: "/about",
+      component: Page,
+      props: { page: "about" }
+    }
+  ];
+
   const createStudyRoutes = (prefix, routes) => {
     return routes.map((route) => ({
       ...route,
-      path: `/${prefix}${route.path}`,
+      path: route.path,
       props: route.props
         ? {
             ...route.props,
@@ -34,47 +49,72 @@ function App() {
     }));
   };
 
-  const createContenNavs = (prefix, contentNavs) => {
-    return contentNavs.map((contentNav) => ({
-      ...contentNav,
-      links: contentNav.links.map((link) => ({
-        ...link,
-        to: `/${prefix}${link.to}`
-      })),
-      path: `/${prefix}${contentNav.path}`
+  const createLinks = (prefix, links) => {
+    return links.map((link) => ({
+      ...link,
+      to: `/${prefix}${link.to}`
     }));
   };
 
+  const createContenNavs = (prefix, contentNavs) => {
+    return contentNavs.map((contentNav) => ({
+      ...contentNav,
+      links: createLinks(prefix, contentNav.links),
+      path: contentNav.path
+    }));
+  };
+
+  const indexConfig = {
+    basePath: "",
+    scenarios: [],
+    defaultScenarioGroup: "",
+    routes: otherRoutes,
+    routeWithSidebar: "",
+    contentNavs: [],
+    headerNavLinks: configuration.headerNavLinks,
+    repositories: isRepositoriesLoading ? null : dataRepositories
+  };
+
   const studyConfigs = dataRepositories
-    ? dataRepositories.map((repository) => ({
-        name: repository.name,
-        basePath: `${ghpages}${repository.name}`,
-        scenarios: configuration.studies.find(
-          (study) => study.name === repository.name
-        ).scenarios,
-        defaultScenarioGroup: configuration.defaultScenarioGroups.find(
-          (defaultScenarioGroup) =>
-            defaultScenarioGroup.name === repository.name
-        ).scenarioName,
-        routes: createStudyRoutes(repository.name, configuration.studyRoutes),
-        routeWithSidebar: `/${repository.name}${configuration.routeWithSidebar}`,
-        contentNavs: createContenNavs(
-          repository.name,
-          configuration.contentNavs
-        ),
-        headerNavLinks: configuration.headerNavLinks
-      }))
-    : null;
+    ? [
+        indexConfig,
+        ...dataRepositories.map((repository) => ({
+          name: repository.name,
+          basePath: `${ghpages}${repository.name}`,
+          scenarios: configuration.studies.find(
+            (study) => study.name === repository.name
+          ).scenarios,
+          defaultScenarioGroup: configuration.defaultScenarioGroups.find(
+            (defaultScenarioGroup) =>
+              defaultScenarioGroup.name === repository.name
+          ).scenarioName,
+          routes: createStudyRoutes(repository.name, configuration.studyRoutes),
+          routeWithSidebar: configuration.routeWithSidebar,
+          contentNavs: createContenNavs(
+            repository.name,
+            configuration.contentNavs
+          ),
+          headerNavLinks: createLinks(
+            repository.name,
+            configuration.headerNavLinks
+          )
+        }))
+      ]
+    : [indexConfig];
 
   console.log(studyConfigs);
 
   return (
-    <>
+    <Routes>
       {!isRepositoriesLoading &&
         studyConfigs.map((config, idx) => (
-          <Layout {...config} cache={cache} key={idx} />
+          <Route
+            key={idx}
+            path={config.name ? `${config.name}/*` : "/*"}
+            element={<Layout {...config} cache={cache} />}
+          />
         ))}
-    </>
+    </Routes>
   );
 }
 
