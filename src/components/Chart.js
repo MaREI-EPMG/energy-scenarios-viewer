@@ -48,7 +48,9 @@ function Chart(props) {
   const width = 600;
 
   let barWidth = Math.round(
-    (0.7 * width) / (selectedScenarios[1] ? 2 : 1) / xPeriods.length
+    (0.7 * width) /
+      (selectedScenarios[1] && !showDifference ? 2 : 1) /
+      xPeriods.length
   );
   let [mainScenarioDataLoading, mainScenarioData] = useFetch(urls[0], cache);
   let [compareScenarioDataLoading, compareScenarioData] = useFetch(
