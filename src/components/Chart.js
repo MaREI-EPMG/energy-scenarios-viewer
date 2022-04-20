@@ -43,11 +43,11 @@ function Chart(props) {
     (scenario) => scenario && `${basePath}/${scenario}/${chartName}.json`
   );
 
-  let xPeriods = "xPeriods" in props ? props["xPeriods"] : xGridMarks;
+  const xPeriods = props.xPeriods ? props.xPeriods : xGridMarks;
 
   const width = 600;
 
-  let barWidth = Math.round(
+  const barWidth = Math.round(
     (0.7 * width) /
       (selectedScenarios[1] && !showDifference ? 2 : 1) /
       xPeriods.length
@@ -97,7 +97,9 @@ function Chart(props) {
       <VictoryChart
         width={width}
         padding={{ left: 60, right: 10, top: 30, bottom: 30 }}
-        domainPadding={{ x: barWidth * (selectedScenarios[1] ? 1.3 : 0.8) }}
+        domainPadding={{
+          x: barWidth * (selectedScenarios[1] && !showDifference ? 1.3 : 0.8)
+        }}
         domain={chartDomain}
         containerComponent={
           <VictoryContainer

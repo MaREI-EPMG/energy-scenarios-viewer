@@ -102,8 +102,6 @@ function App() {
       ]
     : [indexConfig];
 
-  console.log(studyConfigs);
-
   return (
     <Routes>
       {!isRepositoriesLoading &&
