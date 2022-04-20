@@ -1,54 +1,120 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Layout } from "./containers";
+import { Route, Routes } from "react-router-dom";
 import configuration from "./config";
+import useFetch from "./hooks/useFetch";
+
+const IndexPage = React.lazy(() => import("./components/IndexPage"));
+const Page = React.lazy(() => import("./components/Page"));
 
 function App() {
-  const [basePath, setBasePath] = useState("");
+  const cache = useRef({});
+  const topic = "tim-scenario";
+  const org = "MaREI-EPMG";
+  const [isRepositoriesLoading, repositories] = useFetch(
+    `https://api.github.com/orgs/${org}/repos`,
+    cache
+  );
+  const ghpages = `https://${org}.github.io/`;
 
-  const config = {
-    scenarios: configuration.studies.find(
-      (study) => study.basePath === basePath
-    ).scenarios,
-    defaultScenarioGroup: configuration.defaultScenarioGroups.find(
-      (defaultScenarioGroup) => defaultScenarioGroup.basePath === basePath
-    ).scenarioName,
-    routes: configuration.routes,
-    routeWithSidebar: configuration.routeWithSidebar,
-    contentNavs: configuration.contentNavs,
-    headerNavLinks: configuration.headerNavLinks
+  const dataRepositories = isRepositoriesLoading
+    ? null
+    : repositories.filter((repository) => {
+        return repository.topics.includes(topic) && repository.has_pages;
+      });
+
+  const otherRoutes = [
+    {
+      path: "/",
+      component: IndexPage,
+      props: { repositories: dataRepositories }
+    },
+    {
+      path: "/about",
+      component: Page,
+      props: { page: "about" }
+    }
+  ];
+
+  const createStudyRoutes = (prefix, routes) => {
+    return routes.map((route) => ({
+      ...route,
+      path: route.path,
+      props: route.props
+        ? {
+            ...route.props,
+            to: route.props.to ? `/${prefix}${route.props.to}` : ""
+          }
+        : ""
+    }));
   };
 
-  const [mainScenario, setMainScenario] = useState(config.defaultScenarioGroup);
-  const [compareScenario, setCompareScenario] = useState(null);
-  const [showDifference, setShowDifference] = useState(false);
-  const cache = useRef({});
+  const createLinks = (prefix, links) => {
+    return links.map((link) => ({
+      ...link,
+      to: `/${prefix}${link.to}`
+    }));
+  };
 
-  useEffect(() => {
-    if (!compareScenario) {
-      setShowDifference(false);
-    }
-  }, [compareScenario]);
+  const createContenNavs = (prefix, contentNavs) => {
+    return contentNavs.map((contentNav) => ({
+      ...contentNav,
+      links: createLinks(prefix, contentNav.links),
+      path: contentNav.path
+    }));
+  };
 
-  useEffect(() => {
-    setMainScenario(
-      configuration.defaultScenarioGroups.find(
-        (defaultScenarioGroup) => defaultScenarioGroup.basePath === basePath
-      ).scenarioName
-    );
-  }, [basePath]);
+  const indexConfig = {
+    basePath: "",
+    scenarios: [],
+    defaultScenarioGroup: "",
+    routes: otherRoutes,
+    routeWithSidebar: "",
+    contentNavs: [],
+    headerNavLinks: configuration.headerNavLinks,
+    repositories: isRepositoriesLoading ? null : dataRepositories
+  };
+
+  const studyConfigs = dataRepositories
+    ? [
+        indexConfig,
+        ...dataRepositories.map((repository) => ({
+          name: repository.name,
+          basePath: `${ghpages}${repository.name}`,
+          scenarios: configuration.studies.find(
+            (study) => study.name === repository.name
+          ).scenarios,
+          defaultScenarioGroup: configuration.defaultScenarioGroups.find(
+            (defaultScenarioGroup) =>
+              defaultScenarioGroup.name === repository.name
+          ).scenarioName,
+          routes: createStudyRoutes(repository.name, configuration.studyRoutes),
+          routeWithSidebar: configuration.routeWithSidebar,
+          contentNavs: createContenNavs(
+            repository.name,
+            configuration.contentNavs
+          ),
+          headerNavLinks: createLinks(
+            repository.name,
+            configuration.headerNavLinks
+          )
+        }))
+      ]
+    : [indexConfig];
+
+  console.log(studyConfigs);
 
   return (
-    <Layout
-      {...config}
-      cache={cache}
-      basePath={basePath}
-      selectedScenarios={[mainScenario, compareScenario]}
-      showDifference={showDifference}
-      setBasePath={setBasePath}
-      setMainScenario={setMainScenario}
-      setCompareScenario={setCompareScenario}
-      setShowDifference={setShowDifference}
-    />
+    <Routes>
+      {!isRepositoriesLoading &&
+        studyConfigs.map((config, idx) => (
+          <Route
+            key={idx}
+            path={config.name ? `${config.name}/*` : "/*"}
+            element={<Layout {...config} cache={cache} />}
+          />
+        ))}
+    </Routes>
   );
 }
 

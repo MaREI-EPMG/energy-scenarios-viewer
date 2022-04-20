@@ -3,32 +3,11 @@ import { Navigate } from "react-router-dom";
 
 const Charts = React.lazy(() => import("./components/Charts"));
 const Page = React.lazy(() => import("./components/Page"));
-const IndexPage = React.lazy(() => import("./components/IndexPage"));
 const PageNotFound = React.lazy(() => import("./components/NotFound"));
 
 const studies = [
   {
-    basePath: "",
-    scenarios: [
-      {
-        name: "Scenario 1",
-        variants: [{ name: "Scenario 1", specs: null }]
-      },
-      {
-        name: "Scenario 2",
-        variants: [{ name: "Scenario 2", specs: null }]
-      },
-      {
-        name: "Scenario 3",
-        variants: [{ name: "Scenario 3", specs: null }]
-      },
-      {
-        name: "Scenario 4",
-        variants: [{ name: "Scenario 4", specs: null }]
-      }
-    ]
-  },
-  {
+    name: "tim-energy-security-2022",
     basePath: "https://MaREI-EPMG.github.io/tim-energy-security-2022",
     scenarios: [
       {
@@ -99,6 +78,7 @@ const studies = [
     ]
   },
   {
+    name: "tim-carbon-budgets-2021",
     basePath: "https://MaREI-EPMG.github.io/tim-carbon-budgets-2021",
     scenarios: [
       {
@@ -156,11 +136,8 @@ const studies = [
     ]
   }
 ];
-const routes = [
-  {
-    path: "/",
-    component: IndexPage
-  },
+
+const studyRoutes = [
   {
     path: "/about",
     component: Page,
@@ -398,21 +375,24 @@ const routes = [
     props: { replace: true, to: "/results/overview/emissions-and-cost" }
   },
   {
-    path: "*",
+    path: "/*",
     component: PageNotFound
   }
 ];
+
 const defaultScenarioNames = [
-  { basePath: "", scenarioName: "Scenario 1" },
   {
+    name: "tim-carbon-budgets-2021",
     basePath: "https://MaREI-EPMG.github.io/tim-carbon-budgets-2021",
     scenarioName: "No_Mitigation"
   },
   {
+    name: "tim-energy-security-2022",
     basePath: "https://MaREI-EPMG.github.io/tim-energy-security-2022",
     scenarioName: "no_mitigation"
   }
 ];
+
 const contentNavs = [
   {
     path: "/results/*",
@@ -474,6 +454,7 @@ const contentNavs = [
     variant: "underscore"
   }
 ];
+
 const headerNavLinks = [
   { to: "/about", text: "About" },
   { to: "/results", text: "Results" }
@@ -484,7 +465,7 @@ const routeWithSidebar = "/results/*";
 const config = {
   studies: studies,
   defaultScenarioGroups: defaultScenarioNames,
-  routes: routes,
+  studyRoutes: studyRoutes,
   routeWithSidebar: routeWithSidebar,
   contentNavs: contentNavs,
   headerNavLinks: headerNavLinks
