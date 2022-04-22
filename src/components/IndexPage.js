@@ -8,7 +8,10 @@ function IndexPage(props) {
   return (
     <>
       {repositories && (
-        <Row xs={"auto"} className="charts py-2 justify-content-center">
+        <Row
+          xs={"auto"}
+          className="charts py-2 justify-content-center align-items-center h-100"
+        >
           {repositories.map((repository, idx) => (
             <Col className="p-2" key={idx}>
               <Card>
