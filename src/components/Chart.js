@@ -14,12 +14,6 @@ import useFetch from "../hooks/useFetch";
 import calculateDifference from "../utils/calculateDifference";
 import normaliseData from "../utils/normaliseData";
 
-function formatLegendNumber(datum) {
-  return Intl.NumberFormat("en-IE", { maximumSignificantDigits: 3 }).format(
-    datum
-  );
-}
-
 function Chart(props) {
   const {
     selectedScenarios,
@@ -34,8 +28,26 @@ function Chart(props) {
     minY,
     xGridMarks,
     basePath,
-    cache
+    cache,
+    locale
   } = props;
+
+  const numberStyle = {
+    maximumSignificantDigits: 3
+  };
+
+  const yearStyle = {
+    useGrouping: false
+  };
+
+  const yGridStyle = {
+    maximumSignificantDigits: 3,
+    notation: "compact"
+  };
+
+  const formattedNumber = (number, locale, options) => {
+    return Intl.NumberFormat(locale, options).format(number);
+  };
 
   const chartDomain = showDifference ? null : { y: [minY, maxY] };
 
@@ -96,7 +108,7 @@ function Chart(props) {
     <>
       <VictoryChart
         width={width}
-        padding={{ left: 60, right: 10, top: 30, bottom: 30 }}
+        padding={{ left: 50, right: 20, top: 30, bottom: 40 }}
         domainPadding={{
           x: barWidth * (selectedScenarios[1] && !showDifference ? 1.3 : 0.8)
         }}
@@ -111,14 +123,22 @@ function Chart(props) {
       >
         <VictoryPortal>
           <VictoryAxis
-            tickFormat={(t) => t.toString()}
+            tickFormat={(t) => formattedNumber(t, locale, yearStyle)}
             tickValues={xGridMarks}
           />
         </VictoryPortal>
         <VictoryAxis
+          tickFormat={(t) =>
+            t > 0.01
+              ? formattedNumber(t, locale, yGridStyle)
+              : formattedNumber(t, locale, {
+                  ...yGridStyle,
+                  notation: "scientific"
+                })
+          }
           dependentAxis
           label={unit}
-          axisLabelComponent={<VictoryLabel y={20} x={30} angle={0} />}
+          axisLabelComponent={<VictoryLabel y={20} x={35} angle={0} />}
         />
         {!mainScenarioDataLoading && !compareScenarioDataLoading && (
           <VictoryGroup offset={barWidth + 1}>
@@ -141,12 +161,14 @@ function Chart(props) {
                                 scenario.name[1]
                               : scenarioTitles[scenario.name] || scenario.name
                           }
-                        ${datum[0]}
+                        ${formattedNumber(datum[0], locale, yearStyle)}
                         ${
                           seriesTitles[series.seriesName] || series.seriesName
-                        }: ${formatLegendNumber(datum[1])} ${unit}
-                        Total: ${formatLegendNumber(
-                          getTotal(scenario.data, datum[0])
+                        }: ${formattedNumber(datum[1], locale)} ${unit}
+                        Total: ${formattedNumber(
+                          getTotal(scenario.data, datum[0]),
+                          locale,
+                          numberStyle
                         )} ${unit}`
                         }
                         x={0}
