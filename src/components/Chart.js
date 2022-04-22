@@ -108,7 +108,7 @@ function Chart(props) {
     <>
       <VictoryChart
         width={width}
-        padding={{ left: 60, right: 10, top: 30, bottom: 30 }}
+        padding={{ left: 50, right: 20, top: 30, bottom: 40 }}
         domainPadding={{
           x: barWidth * (selectedScenarios[1] && !showDifference ? 1.3 : 0.8)
         }}
@@ -138,7 +138,7 @@ function Chart(props) {
           }
           dependentAxis
           label={unit}
-          axisLabelComponent={<VictoryLabel y={20} x={30} angle={0} />}
+          axisLabelComponent={<VictoryLabel y={20} x={35} angle={0} />}
         />
         {!mainScenarioDataLoading && !compareScenarioDataLoading && (
           <VictoryGroup offset={barWidth + 1}>
