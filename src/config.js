@@ -146,6 +146,18 @@ const studies = [
       {
         name: "Mitigation_SectoralCBs",
         variants: [{ name: "Mitigation_SectoralCBs", specs: null }]
+      },
+      {
+        name: "Mitigation_ReducedSectoralCBs",
+        variants: [{ name: "Mitigation_ReducedSectoralCBs", specs: null }]
+      },
+      {
+        name: "Mitigation_CarbonBudget",
+        variants: [{ name: "Mitigation_CarbonBudget", specs: null }]
+      },
+      {
+        name: "Mitigation_ReducedCarbonBudget",
+        variants: [{ name: "Mitigation_ReducedCarbonBudget", specs: null }]
       }
     ]
   }
