@@ -74,7 +74,8 @@ const scenarioTitles = {
   "Mitigation_CAP21_A55E49-lowBio": "A55-E49 Low Bio",
   "Mitigation_CAP21_A55E49-techOptimism": "A55-E49 Tech-Optimism",
   "Mitigation_WAM": "WAM",
-  "No_Mitigation": "No Mitigation"
+  "No_Mitigation": "No Mitigation",
+  "Mitigation_SectoralCBs": "Sectoral CBs"
 };
 
 export default scenarioTitles;

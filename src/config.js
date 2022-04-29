@@ -134,6 +134,20 @@ const studies = [
         variants: [{ name: "No_Mitigation", "specs": null }]
       }
     ]
+  },
+  {
+    name: "tim-carbon-budgets-2022",
+    basePath: "https://MaREI-EPMG.github.io/tim-carbon-budgets-2022",
+    scenarios: [
+      {
+        name: "No_Mitigation",
+        variants: [{ name: "No_Mitigation", specs: null }]
+      },
+      {
+        name: "Mitigation_SectoralCBs",
+        variants: [{ name: "Mitigation_SectoralCBs", specs: null }]
+      }
+    ]
   }
 ];
 
@@ -384,6 +398,11 @@ const defaultScenarioNames = [
   {
     name: "tim-carbon-budgets-2021",
     basePath: "https://MaREI-EPMG.github.io/tim-carbon-budgets-2021",
+    scenarioName: "No_Mitigation"
+  },
+  {
+    name: "tim-carbon-budgets-2022",
+    basePath: "https://MaREI-EPMG.github.io/tim-carbon-budgets-2022",
     scenarioName: "No_Mitigation"
   },
   {
