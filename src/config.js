@@ -221,6 +221,24 @@ const studyRoutes = [
     }
   },
   {
+    path: "/results/overview/other",
+    component: Charts,
+    props: {
+      charts: [
+        "SYS_Emissions_CO2_Domestic_Cumulative",
+        "SYS_Cost_Sector_Cumulative",
+        "SYS_LumpInv_Sector_Cumulative",
+        "AGR_CO2N_Price",
+        "IND_CO2N_Price",
+        "IND_CO2P_Price",
+        "PWR_CO2N_Price",
+        "RSD_CO2_Price",
+        "SRV_CO2N_Price",
+        "TRA_CO2N_Price"
+      ]
+    }
+  },
+  {
     path: "/results/supply",
     component: Charts,
     props: {
@@ -450,7 +468,8 @@ const contentNavs = [
         to: "/results/overview/final-energy-consumption",
         text: "Final energy consumption"
       },
-      { to: "/results/overview/primary-energy", text: "Primary energy" }
+      { to: "/results/overview/primary-energy", text: "Primary energy" },
+      { to: "/results/overview/other", text: "Other" }
     ],
     variant: "underscore"
   },

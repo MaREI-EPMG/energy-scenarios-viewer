@@ -50,21 +50,63 @@ const chartsInfo = {
       "#D99C2B"
     ],
     "unit": "kt",
-    "maxY": 49540,
-    "minY": -5459,
+    "maxY": 49630,
+    "minY": -5268,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 60
+  },
+  "SYS_Emissions_CO2_Domestic_Cumulative": {
+    "seriesNames": [
+      "AGRCO2N",
+      "INDCO2N",
+      "INDCO2P",
+      "PWRCO2N",
+      "RSDCO2",
+      "SRVCO2N",
+      "TRACO2N"
+    ],
+    "colorScale": [
+      "#A7398C",
+      "#86AC0F",
+      "#6C104C",
+      "#ECDEB1",
+      "#39A838",
+      "#E4592B",
+      "#D99C2B"
+    ],
+    "unit": "kt",
+    "maxY": 1226761,
+    "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 60
   },
   "SYS_DACS": {
-    "seriesNames": ["AGRCO2N", "INDCO2P", "INDCO2N", "RSDCO2"],
-    "colorScale": ["#A7398C", "#6C104C", "#86AC0F", "#39A838"],
+    "seriesNames": [
+      "AGRCO2N",
+      "INDCO2N",
+      "INDCO2P",
+      "SRVCO2N",
+      "TRACO2N",
+      "RSDCO2",
+      "PWRCO2N"
+    ],
+    "colorScale": [
+      "#A7398C",
+      "#86AC0F",
+      "#6C104C",
+      "#E4592B",
+      "#D99C2B",
+      "#39A838",
+      "#ECDEB1"
+    ],
     "unit": "kt",
-    "maxY": 1085,
+    "maxY": 9620,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 30
+    "height": 60
   },
   "IND_Emissions-CO2": {
     "seriesNames": [
@@ -100,18 +142,17 @@ const chartsInfo = {
       "#04B026"
     ],
     "unit": "kt",
-    "maxY": 10231,
+    "maxY": 9620,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 210,
-    "itemsPerRow": 2
+    "height": 120
   },
   "RSD_BLD_TYPE": {
     "seriesNames": ["DMD_RSD-BLD-APT", "DMD_RSD-BLD-ATT", "DMD_RSD-BLD-DET"],
     "colorScale": ["#2A6451", "#3BCE99", "#108840"],
     "unit": "kUnits",
-    "maxY": 2911,
+    "maxY": 2575,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -121,7 +162,7 @@ const chartsInfo = {
     "seriesNames": ["DMD_RSD-BLD-APT", "DMD_RSD-BLD-ATT", "DMD_RSD-BLD-DET"],
     "colorScale": ["#2A6451", "#3BCE99", "#108840"],
     "unit": "kDwellings",
-    "maxY": 170,
+    "maxY": 98,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -157,7 +198,39 @@ const chartsInfo = {
       "#5008CC"
     ],
     "unit": "PJ",
-    "maxY": 178,
+    "maxY": 155,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 90
+  },
+  "TRA_FEC-TRABDL_Mode_Detailed": {
+    "seriesNames": [
+      "DMD_TRA-F-HTRUCK",
+      "DMD_TRA-F-LTRUCK",
+      "DMD_TRA-F-MTRUCK",
+      "DMD_TRA-P-BUS",
+      "DMD_TRA-P-CAR",
+      "DMD_TRA-P-HPT",
+      "DMD_TRA-P-TAXI",
+      "DMD_TRA-R-NAV",
+      "DMD_TRA-R-OTH",
+      "DMD_TRA-R-TURS"
+    ],
+    "colorScale": [
+      "#628307",
+      "#D1E23C",
+      "#43B4D2",
+      "#B4D24C",
+      "#5F363A",
+      "#E23BB8",
+      "#85CBAC",
+      "#AB6461",
+      "#C005E2",
+      "#277199"
+    ],
+    "unit": "PJ",
+    "maxY": 27,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -172,7 +245,17 @@ const chartsInfo = {
     ],
     "colorScale": ["#628307", "#D1E23C", "#43B4D2", "#40E92E"],
     "unit": "Btkm",
-    "maxY": 40,
+    "maxY": 25,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "TRA_FEC-TRABNG_Mode_Detailed": {
+    "seriesNames": ["DMD_TRA-F-HTRUCK", "DMD_TRA-F-MTRUCK", "DMD_TRA-P-BUS"],
+    "colorScale": ["#628307", "#43B4D2", "#B4D24C"],
+    "unit": "PJ",
+    "maxY": 14,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -187,7 +270,7 @@ const chartsInfo = {
     ],
     "colorScale": ["#75181D", "#28058D", "#8180EB", "#D33780"],
     "unit": "kVehicles",
-    "maxY": 40,
+    "maxY": 6,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -202,17 +285,7 @@ const chartsInfo = {
     ],
     "colorScale": ["#75181D", "#28058D", "#8180EB", "#D33780"],
     "unit": "kVehicles",
-    "maxY": 73,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 30
-  },
-  "TRA-Land_LumpInv": {
-    "seriesNames": ["DMD_TRA-F-LAND", "DMD_TRA-P-LAND"],
-    "colorScale": ["#0C5871", "#F464BA"],
-    "unit": "MEUR",
-    "maxY": 37469,
+    "maxY": 47,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -238,7 +311,33 @@ const chartsInfo = {
       "#277199"
     ],
     "unit": "kt",
-    "maxY": 16264,
+    "maxY": 15698,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 60
+  },
+  "TRA-Land_LumpInv": {
+    "seriesNames": ["DMD_TRA-F-LAND", "DMD_TRA-P-LAND"],
+    "colorScale": ["#0C5871", "#F464BA"],
+    "unit": "MEUR",
+    "maxY": 16126,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "TRA_FEC-TRAETH_Mode_Detailed": {
+    "seriesNames": [
+      "DMD_TRA-F-LTRUCK",
+      "DMD_TRA-P-CAR",
+      "DMD_TRA-P-MOT",
+      "DMD_TRA-P-TAXI",
+      "DMD_TRA-R-OTH"
+    ],
+    "colorScale": ["#D1E23C", "#5F363A", "#3420FE", "#85CBAC", "#C005E2"],
+    "unit": "PJ",
+    "maxY": 6,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -247,13 +346,13 @@ const chartsInfo = {
   "TRA_F-LTRUCK-N_TYPE": {
     "seriesNames": [
       "DMD_TRA-F-LTRUCK-BEV",
-      "DMD_TRA-F-LTRUCK-ICE",
       "DMD_TRA-F-LTRUCK-HEV",
+      "DMD_TRA-F-LTRUCK-ICE",
       "DMD_TRA-F-LTRUCK-PHEV"
     ],
-    "colorScale": ["#D83056", "#63F497", "#56A1BC", "#C3CEBE"],
+    "colorScale": ["#D83056", "#56A1BC", "#63F497", "#C3CEBE"],
     "unit": "kVehicles",
-    "maxY": 374,
+    "maxY": 78,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -262,13 +361,13 @@ const chartsInfo = {
   "TRA_F-LTRUCK_TYPE": {
     "seriesNames": [
       "DMD_TRA-F-LTRUCK-BEV",
-      "DMD_TRA-F-LTRUCK-ICE",
       "DMD_TRA-F-LTRUCK-HEV",
+      "DMD_TRA-F-LTRUCK-ICE",
       "DMD_TRA-F-LTRUCK-PHEV"
     ],
-    "colorScale": ["#D83056", "#63F497", "#56A1BC", "#C3CEBE"],
+    "colorScale": ["#D83056", "#56A1BC", "#63F497", "#C3CEBE"],
     "unit": "kVehicles",
-    "maxY": 797,
+    "maxY": 506,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -283,7 +382,7 @@ const chartsInfo = {
     ],
     "colorScale": ["#A6DF18", "#0CD9F9", "#573396", "#A38604"],
     "unit": "kVehicles",
-    "maxY": 20,
+    "maxY": 3,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -298,7 +397,7 @@ const chartsInfo = {
     ],
     "colorScale": ["#A6DF18", "#0CD9F9", "#573396", "#A38604"],
     "unit": "kVehicles",
-    "maxY": 37,
+    "maxY": 23,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -324,33 +423,7 @@ const chartsInfo = {
       "#85CBAC"
     ],
     "unit": "Bpkm",
-    "maxY": 115,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 60
-  },
-  "TRA_Passenger_Land_Mode-M": {
-    "seriesNames": [
-      "DMD_TRA-P-ACTIVE",
-      "DMD_TRA-P-BUS",
-      "DMD_TRA-P-CAR",
-      "DMD_TRA-P-HPT",
-      "DMD_TRA-P-LPT",
-      "DMD_TRA-P-MOT",
-      "DMD_TRA-P-TAXI"
-    ],
-    "colorScale": [
-      "#BF4776",
-      "#B4D24C",
-      "#5F363A",
-      "#E23BB8",
-      "#7E38F2",
-      "#3420FE",
-      "#85CBAC"
-    ],
-    "unit": "Bpkm",
-    "maxY": 49,
+    "maxY": 105,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -374,7 +447,7 @@ const chartsInfo = {
       "#85CBAC"
     ],
     "unit": "Bpkm",
-    "maxY": 23,
+    "maxY": 21,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -389,11 +462,27 @@ const chartsInfo = {
     ],
     "colorScale": ["#B4D24C", "#5F363A", "#E23BB8", "#85CBAC"],
     "unit": "Bpkm",
-    "maxY": 43,
+    "maxY": 39,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 30
+  },
+  "TRA_Passenger_Land_Mode-M": {
+    "seriesNames": [
+      "DMD_TRA-P-BUS",
+      "DMD_TRA-P-CAR",
+      "DMD_TRA-P-LPT",
+      "DMD_TRA-P-MOT",
+      "DMD_TRA-P-TAXI"
+    ],
+    "colorScale": ["#B4D24C", "#5F363A", "#7E38F2", "#3420FE", "#85CBAC"],
+    "unit": "Bpkm",
+    "maxY": 45,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 60
   },
   "TRA_P-CAR_TYPE": {
     "seriesNames": [
@@ -404,7 +493,7 @@ const chartsInfo = {
     ],
     "colorScale": ["#D26ECD", "#69597A", "#EF8F51", "#63955B"],
     "unit": "kVehicles",
-    "maxY": 3577,
+    "maxY": 3276,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -419,7 +508,77 @@ const chartsInfo = {
     ],
     "colorScale": ["#D26ECD", "#69597A", "#EF8F51", "#63955B"],
     "unit": "kVehicles",
-    "maxY": 1173,
+    "maxY": 508,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "TRA_FEC-TRABJK_Mode_Detailed": {
+    "seriesNames": ["DMD_TRA-R-AVIDOM"],
+    "colorScale": ["#A1ECAD"],
+    "unit": "PJ",
+    "maxY": 0,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "AGR_CO2N_Price": {
+    "seriesNames": ["ENV-CO2"],
+    "colorScale": ["#F46A9D"],
+    "unit": "MEUR/kt",
+    "maxY": 2,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "IND_CO2N_Price": {
+    "seriesNames": ["ENV-CO2"],
+    "colorScale": ["#F46A9D"],
+    "unit": "MEUR/kt",
+    "maxY": 2,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "IND_CO2P_Price": {
+    "seriesNames": ["ENV-CO2"],
+    "colorScale": ["#F46A9D"],
+    "unit": "MEUR/kt",
+    "maxY": 2,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "PWR_CO2N_Price": {
+    "seriesNames": ["ENV-CO2"],
+    "colorScale": ["#F46A9D"],
+    "unit": "MEUR/kt",
+    "maxY": 2,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "RSD_CO2_Price": {
+    "seriesNames": ["ENV-CO2"],
+    "colorScale": ["#F46A9D"],
+    "unit": "MEUR/kt",
+    "maxY": 2,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "SRV_CO2N_Price": {
+    "seriesNames": ["ENV-CO2"],
+    "colorScale": ["#F46A9D"],
+    "unit": "MEUR/kt",
+    "maxY": 2,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -435,31 +594,41 @@ const chartsInfo = {
     "xGridMarks": xGridMarks,
     "height": 30
   },
-  "SYS_Cost_Type": {
-    "seriesNames": ["FIX", "INV", "VAR"],
-    "colorScale": ["#F7448D", "#14B1ED", "#63CA85"],
-    "unit": "MEUR",
-    "maxY": 34749,
+  "TRA_CO2N_Price": {
+    "seriesNames": ["ENV-CO2"],
+    "colorScale": ["#F46A9D"],
+    "unit": "MEUR/kt",
+    "maxY": 2,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 30
   },
-  "SYS_FEC-ELCD_Sector": {
-    "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_SRV", "FT_TRA"],
-    "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#6EED5E", "#DA7FBD"],
-    "unit": "PJ",
-    "maxY": 339,
+  "SYS_Cost_Type": {
+    "seriesNames": ["FIX", "INV", "VAR"],
+    "colorScale": ["#F7448D", "#14B1ED", "#63CA85"],
+    "unit": "MEUR",
+    "maxY": 39054,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 60
+    "height": 30
+  },
+  "SYS_FEC-LPG_Sector": {
+    "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_SRV"],
+    "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#6EED5E"],
+    "unit": "PJ",
+    "maxY": 8,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
   },
   "SYS_FEC-OILDST_Sector": {
     "seriesNames": ["FT_AGR", "FT_IND", "FT_SRV", "FT_TRA"],
     "colorScale": ["#4A5A17", "#FD69C9", "#6EED5E", "#DA7FBD"],
     "unit": "PJ",
-    "maxY": 170,
+    "maxY": 156,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -469,47 +638,47 @@ const chartsInfo = {
     "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_SRV", "FT_TRA"],
     "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#6EED5E", "#DA7FBD"],
     "unit": "PJ",
-    "maxY": 721,
+    "maxY": 629,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 60
   },
-  "SYS_FEC-LPG_Sector": {
-    "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_SRV"],
-    "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#6EED5E"],
+  "SYS_FEC-ELCD_Sector": {
+    "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_SRV", "FT_TRA"],
+    "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#6EED5E", "#DA7FBD"],
     "unit": "PJ",
-    "maxY": 112,
+    "maxY": 300,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 30
-  },
-  "SYS_FEC-BIODST_Sector": {
-    "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_TRA"],
-    "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#DA7FBD"],
-    "unit": "PJ",
-    "maxY": 35,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 30
+    "height": 60
   },
   "SYS_FEC-GASNAT_Sector": {
     "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_SRV", "FT_TRA"],
     "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#6EED5E", "#DA7FBD"],
     "unit": "PJ",
-    "maxY": 290,
+    "maxY": 258,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 60
   },
+  "SYS_FEC-BIODST_Sector": {
+    "seriesNames": ["FT_AGR", "FT_IND", "FT_RSD", "FT_TRA"],
+    "colorScale": ["#4A5A17", "#FD69C9", "#C07285", "#DA7FBD"],
+    "unit": "PJ",
+    "maxY": 29,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
   "SYS_FEC-BIOGAS_Sector": {
     "seriesNames": ["FT_IND", "FT_SRV", "FT_TRA"],
     "colorScale": ["#FD69C9", "#6EED5E", "#DA7FBD"],
     "unit": "PJ",
-    "maxY": 58,
+    "maxY": 28,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -519,7 +688,7 @@ const chartsInfo = {
     "seriesNames": ["FT_IND", "FT_RSD", "FT_SRV"],
     "colorScale": ["#FD69C9", "#C07285", "#6EED5E"],
     "unit": "PJ",
-    "maxY": 43,
+    "maxY": 26,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -529,7 +698,7 @@ const chartsInfo = {
     "seriesNames": ["FT_IND", "FT_RSD", "FT_SRV"],
     "colorScale": ["#FD69C9", "#C07285", "#6EED5E"],
     "unit": "PJ",
-    "maxY": 24,
+    "maxY": 22,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -539,7 +708,7 @@ const chartsInfo = {
     "seriesNames": ["FT_IND", "FT_SRV"],
     "colorScale": ["#FD69C9", "#6EED5E"],
     "unit": "PJ",
-    "maxY": 15,
+    "maxY": 14,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -569,7 +738,7 @@ const chartsInfo = {
     "seriesNames": ["FT_IND", "FT_TRA"],
     "colorScale": ["#FD69C9", "#DA7FBD"],
     "unit": "PJ",
-    "maxY": 59,
+    "maxY": 24,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -579,7 +748,7 @@ const chartsInfo = {
     "seriesNames": ["FT_RSD", "FT_TRA"],
     "colorScale": ["#C07285", "#DA7FBD"],
     "unit": "PJ",
-    "maxY": 8,
+    "maxY": 6,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -609,7 +778,7 @@ const chartsInfo = {
     "seriesNames": ["HETC"],
     "colorScale": ["#9C427F"],
     "unit": "PJ",
-    "maxY": 6,
+    "maxY": 5,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -618,24 +787,24 @@ const chartsInfo = {
   "SUP_BIODST": {
     "seriesNames": [
       "IMPBIODST1G_S1",
+      "IMPBIODST1G_S2",
       "SBIORDST01",
       "SBIORDST02",
       "SBIORDST03",
       "SBIORDST04",
-      "SBIORDST05",
-      "IMPBIODST1G_S2"
+      "SBIORDST05"
     ],
     "colorScale": [
       "#7C5F04",
+      "#06D6AA",
       "#392A26",
       "#75EE15",
       "#B5CEAF",
       "#A069BD",
-      "#A044F1",
-      "#06D6AA"
+      "#A044F1"
     ],
     "unit": "PJ",
-    "maxY": 35,
+    "maxY": 29,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -644,14 +813,67 @@ const chartsInfo = {
   "SUP_BIOETH": {
     "seriesNames": [
       "IMPBIOETH1G_S1",
+      "IMPBIOETH1G_S2",
       "SBIORETH01",
-      "SBIORETH02",
-      "SBIORETH03",
-      "IMPBIOETH1G_S2"
+      "SBIORETH03"
     ],
-    "colorScale": ["#2BB2C1", "#BEDA89", "#78B976", "#42497B", "#D92AD0"],
+    "colorScale": ["#2BB2C1", "#D92AD0", "#BEDA89", "#42497B"],
     "unit": "PJ",
-    "maxY": 8,
+    "maxY": 6,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
+  },
+  "IND-MAE_FEC": {
+    "seriesNames": [
+      "INDBDL",
+      "INDBGS",
+      "INDBKE",
+      "INDDST",
+      "INDELC",
+      "INDGAS",
+      "INDKER",
+      "INDLPG"
+    ],
+    "colorScale": [
+      "#1692D0",
+      "#B92FD7",
+      "#49EE2C",
+      "#849272",
+      "#8E54D5",
+      "#14100E",
+      "#ACB842",
+      "#44E806"
+    ],
+    "unit": "PJ",
+    "maxY": 2,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 60
+  },
+  "IND-TEM_FEC": {
+    "seriesNames": [
+      "INDBDL",
+      "INDBKE",
+      "INDDST",
+      "INDELC",
+      "INDGAS",
+      "INDKER",
+      "INDLPG"
+    ],
+    "colorScale": [
+      "#1692D0",
+      "#49EE2C",
+      "#849272",
+      "#8E54D5",
+      "#14100E",
+      "#ACB842",
+      "#44E806"
+    ],
+    "unit": "PJ",
+    "maxY": 0,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -683,7 +905,7 @@ const chartsInfo = {
       "#44E806"
     ],
     "unit": "PJ",
-    "maxY": 16,
+    "maxY": 13,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -711,7 +933,7 @@ const chartsInfo = {
       "#44E806"
     ],
     "unit": "PJ",
-    "maxY": 8,
+    "maxY": 6,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -739,7 +961,7 @@ const chartsInfo = {
       "#44E806"
     ],
     "unit": "PJ",
-    "maxY": 27,
+    "maxY": 16,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -775,39 +997,11 @@ const chartsInfo = {
       "#CECD7A"
     ],
     "unit": "PJ",
-    "maxY": 38,
+    "maxY": 34,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 90
-  },
-  "IND-MAE_FEC": {
-    "seriesNames": [
-      "INDBDL",
-      "INDBGS",
-      "INDBKE",
-      "INDDST",
-      "INDELC",
-      "INDGAS",
-      "INDKER",
-      "INDLPG"
-    ],
-    "colorScale": [
-      "#1692D0",
-      "#B92FD7",
-      "#49EE2C",
-      "#849272",
-      "#8E54D5",
-      "#14100E",
-      "#ACB842",
-      "#44E806"
-    ],
-    "unit": "PJ",
-    "maxY": 2,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 60
   },
   "IND-MAP_FEC": {
     "seriesNames": [
@@ -835,7 +1029,7 @@ const chartsInfo = {
       "#44E806"
     ],
     "unit": "PJ",
-    "maxY": 26,
+    "maxY": 22,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -933,7 +1127,7 @@ const chartsInfo = {
       "#E5236B"
     ],
     "unit": "PJ",
-    "maxY": 28,
+    "maxY": 25,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -961,7 +1155,7 @@ const chartsInfo = {
       "#44E806"
     ],
     "unit": "PJ",
-    "maxY": 3,
+    "maxY": 2,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1017,33 +1211,7 @@ const chartsInfo = {
       "#44E806"
     ],
     "unit": "PJ",
-    "maxY": 8,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 60
-  },
-  "IND-TEM_FEC": {
-    "seriesNames": [
-      "INDBDL",
-      "INDBKE",
-      "INDDST",
-      "INDELC",
-      "INDGAS",
-      "INDKER",
-      "INDLPG"
-    ],
-    "colorScale": [
-      "#1692D0",
-      "#49EE2C",
-      "#849272",
-      "#8E54D5",
-      "#14100E",
-      "#ACB842",
-      "#44E806"
-    ],
-    "unit": "PJ",
-    "maxY": 0,
+    "maxY": 5,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1073,7 +1241,7 @@ const chartsInfo = {
       "#44E806"
     ],
     "unit": "PJ",
-    "maxY": 10,
+    "maxY": 8,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1117,11 +1285,63 @@ const chartsInfo = {
       "#E5236B"
     ],
     "unit": "PJ",
-    "maxY": 171,
+    "maxY": 143,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 120
+  },
+  "SYS_Cost_Sector_Cumulative": {
+    "seriesNames": [
+      "PRC_AGR",
+      "PRC_IND",
+      "PRC_PWR",
+      "PRC_RSD",
+      "PRC_SRV",
+      "PRC_SUP",
+      "PRC_TRA"
+    ],
+    "colorScale": [
+      "#773594",
+      "#90D87B",
+      "#4C4AA0",
+      "#D3C171",
+      "#F07314",
+      "#3332D3",
+      "#A184B6"
+    ],
+    "unit": "MEUR",
+    "maxY": 727999,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 60
+  },
+  "SYS_LumpInv_Sector_Cumulative": {
+    "seriesNames": [
+      "PRC_AGR",
+      "PRC_IND",
+      "PRC_PWR",
+      "PRC_RSD",
+      "PRC_SRV",
+      "PRC_SUP",
+      "PRC_TRA"
+    ],
+    "colorScale": [
+      "#773594",
+      "#90D87B",
+      "#4C4AA0",
+      "#D3C171",
+      "#F07314",
+      "#3332D3",
+      "#A184B6"
+    ],
+    "unit": "MEUR",
+    "maxY": 368789,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 60
   },
   "SYS_Cost_Sector": {
     "seriesNames": [
@@ -1143,7 +1363,7 @@ const chartsInfo = {
       "#A184B6"
     ],
     "unit": "MEUR",
-    "maxY": 34749,
+    "maxY": 39054,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1151,25 +1371,25 @@ const chartsInfo = {
   },
   "SYS_LumpInv_Sector": {
     "seriesNames": [
+      "PRC_AGR",
       "PRC_IND",
       "PRC_PWR",
       "PRC_RSD",
       "PRC_SRV",
       "PRC_SUP",
-      "PRC_TRA",
-      "PRC_AGR"
+      "PRC_TRA"
     ],
     "colorScale": [
+      "#773594",
       "#90D87B",
       "#4C4AA0",
       "#D3C171",
       "#F07314",
       "#3332D3",
-      "#A184B6",
-      "#773594"
+      "#A184B6"
     ],
     "unit": "MEUR",
-    "maxY": 76702,
+    "maxY": 24850,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1184,11 +1404,8 @@ const chartsInfo = {
       "PWR-SOL",
       "PWR-WIN-OF",
       "PWR-WIN-ON",
-      "PWR-OCE",
-      "PWR-H2",
-      "PWR-MSW",
       "PWR-BIO",
-      "PWR-COA"
+      "PWR-MSW"
     ],
     "colorScale": [
       "#20DDE0",
@@ -1198,14 +1415,11 @@ const chartsInfo = {
       "#93DA4B",
       "#9CDBD5",
       "#A6EBAD",
-      "#449D47",
-      "#8696E1",
-      "#FCBF65",
       "#15779F",
-      "#9B4566"
+      "#FCBF65"
     ],
     "unit": "GW",
-    "maxY": 11,
+    "maxY": 3,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1223,10 +1437,8 @@ const chartsInfo = {
       "PWR-SOL",
       "PWR-WIN-OF",
       "PWR-WIN-ON",
-      "PWR-OCE",
-      "PWR-H2",
-      "PWR-MSW",
-      "PWR-BIO"
+      "PWR-BIO",
+      "PWR-MSW"
     ],
     "colorScale": [
       "#20DDE0",
@@ -1239,17 +1451,15 @@ const chartsInfo = {
       "#93DA4B",
       "#9CDBD5",
       "#A6EBAD",
-      "#449D47",
-      "#8696E1",
-      "#FCBF65",
-      "#15779F"
+      "#15779F",
+      "#FCBF65"
     ],
     "unit": "GW",
-    "maxY": 51,
+    "maxY": 43,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 120
+    "height": 90
   },
   "PWR_Emissions-CO2": {
     "seriesNames": [
@@ -1271,8 +1481,8 @@ const chartsInfo = {
       "#FCBF65"
     ],
     "unit": "kt",
-    "maxY": 20097,
-    "minY": -5543,
+    "maxY": 21025,
+    "minY": -5361,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 60
@@ -1284,15 +1494,13 @@ const chartsInfo = {
       "PWR-GAS",
       "PWR-GAS-CCS",
       "PWR-HYD",
+      "PWR-OIL",
+      "PWR-PEA",
       "PWR-SOL",
       "PWR-WIN-OF",
       "PWR-WIN-ON",
-      "PWR-OCE",
-      "PWR-OIL",
-      "PWR-PEA",
-      "PWR-H2",
-      "PWR-MSW",
-      "PWR-BIO"
+      "PWR-BIO",
+      "PWR-MSW"
     ],
     "colorScale": [
       "#20DDE0",
@@ -1300,22 +1508,20 @@ const chartsInfo = {
       "#C2F5B8",
       "#E00447",
       "#397186",
+      "#06E9AF",
+      "#8BC852",
       "#93DA4B",
       "#9CDBD5",
       "#A6EBAD",
-      "#449D47",
-      "#06E9AF",
-      "#8BC852",
-      "#8696E1",
-      "#FCBF65",
-      "#15779F"
+      "#15779F",
+      "#FCBF65"
     ],
     "unit": "PJ",
-    "maxY": 424,
+    "maxY": 354,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 120
+    "height": 90
   },
   "PWR_Gen-HETC": {
     "seriesNames": ["PWR-GAS"],
@@ -1327,57 +1533,75 @@ const chartsInfo = {
     "xGridMarks": xGridMarks,
     "height": 30
   },
-  "RSD_WS-DET_NCAP": {
+  "RSD_WS-ATT_NCAP": {
     "seriesNames": [
-      "R-HC_Det_ELC_HPN2",
-      "R-SC_Det_ELC_N1",
-      "R-SH_Det_ELC_N1",
-      "R-SW_Det_ELC_HPN1",
-      "R-SW_Det_GAS_N1",
-      "R-WH_Det_ELC_N1",
-      "R-SW_Det_GAS_HHPN1",
-      "R-SW_Det_HET_N2",
-      "R-SW_Det_HVO_N1",
-      "R-SH_Det_FPL_N1",
-      "R-SW_Det_LPG_N1",
-      "R-SW_Det_HET_N1"
+      "R-HC_Att_ELC_HPN2",
+      "R-SC_Att_ELC_N1",
+      "R-SH_Att_ELC_N1",
+      "R-SW_Att_ELC_HPN1",
+      "R-SW_Att_GAS_HHPN1",
+      "R-SW_Att_GAS_N1",
+      "R-SW_Att_HET_N1",
+      "R-SW_Att_HET_N2",
+      "R-SW_Att_HVO_N1",
+      "R-WH_Att_ELC_N1"
     ],
     "colorScale": [
-      "#3899E8",
-      "#E2DD5C",
-      "#818962",
-      "#EC3EC0",
-      "#98EA40",
-      "#A841A9",
-      "#4B0F91",
-      "#470D26",
-      "#ADEB8D",
-      "#08DBB8",
-      "#1C8632",
-      "#FFC0BE"
+      "#8E2595",
+      "#F7E125",
+      "#592D60",
+      "#3197A1",
+      "#EDE4A7",
+      "#CB5837",
+      "#98BBC5",
+      "#0361B8",
+      "#693529",
+      "#7383C7"
     ],
     "unit": "kUnits",
-    "maxY": 379,
+    "maxY": 172,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 90
   },
-  "RSD_RTFT-APT_NCAP": {
-    "seriesNames": ["R-RTFT-Apt_Shallow", "R-RTFT-Apt_Deep"],
-    "colorScale": ["#466774", "#D4C2FB"],
+  "RSD_WS-DET_NCAP": {
+    "seriesNames": [
+      "R-HC_Det_ELC_HPN2",
+      "R-SC_Det_ELC_N1",
+      "R-SH_Det_ELC_N1",
+      "R-SH_Det_FPL_N1",
+      "R-SW_Det_ELC_HPN1",
+      "R-SW_Det_GAS_HHPN1",
+      "R-SW_Det_GAS_N1",
+      "R-SW_Det_HET_N1",
+      "R-SW_Det_HET_N2",
+      "R-WH_Det_ELC_N1"
+    ],
+    "colorScale": [
+      "#3899E8",
+      "#E2DD5C",
+      "#818962",
+      "#08DBB8",
+      "#EC3EC0",
+      "#4B0F91",
+      "#98EA40",
+      "#FFC0BE",
+      "#470D26",
+      "#A841A9"
+    ],
     "unit": "kUnits",
-    "maxY": 100,
+    "maxY": 145,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 30
+    "height": 90
   },
   "RSD_RTFT-ATT_NCAP": {
-    "seriesNames": ["R-RTFT-Att_Shallow", "R-RTFT-Att_Deep"],
-    "colorScale": ["#466774", "#D4C2FB"],
+    "seriesNames": ["R-RTFT-Att_Shallow"],
+    "colorScale": ["#466774"],
     "unit": "kUnits",
-    "maxY": 138,
+    "maxY": 89,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1387,7 +1611,7 @@ const chartsInfo = {
     "seriesNames": ["R-RTFT-Det_Deep", "R-RTFT-Det_Shallow"],
     "colorScale": ["#486B0D", "#C54C77"],
     "unit": "kUnits",
-    "maxY": 220,
+    "maxY": 146,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1397,53 +1621,17 @@ const chartsInfo = {
     "seriesNames": [
       "R-SC_Apt_ELC_N1",
       "R-SW_Apt_ELC_HPN1",
+      "R-SW_Apt_GAS_N1",
       "R-SW_Apt_HET_N1",
-      "R-SW_Apt_HET_N2",
-      "R-SW_Apt_GAS_N1"
+      "R-SW_Apt_HET_N2"
     ],
-    "colorScale": ["#5052B4", "#946669", "#FCD0CD", "#123163", "#34ED71"],
+    "colorScale": ["#5052B4", "#946669", "#34ED71", "#FCD0CD", "#123163"],
     "unit": "kUnits",
-    "maxY": 283,
+    "maxY": 67,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 60
-  },
-  "RSD_WS-ATT_NCAP": {
-    "seriesNames": [
-      "R-SC_Att_ELC_N1",
-      "R-SH_Att_ELC_N1",
-      "R-SW_Att_ELC_HPN1",
-      "R-SW_Att_GAS_HHPN1",
-      "R-SW_Att_GAS_N1",
-      "R-SW_Att_HET_N1",
-      "R-SW_Att_HET_N2",
-      "R-SW_Att_HVO_N1",
-      "R-WH_Att_ELC_N1",
-      "R-HC_Att_ELC_HPN2",
-      "R-SW_Att_LPG_N1",
-      "R-SH_Att_FPL_N1"
-    ],
-    "colorScale": [
-      "#F7E125",
-      "#592D60",
-      "#3197A1",
-      "#EDE4A7",
-      "#CB5837",
-      "#98BBC5",
-      "#0361B8",
-      "#693529",
-      "#7383C7",
-      "#8E2595",
-      "#73A42A",
-      "#C818F0"
-    ],
-    "unit": "kUnits",
-    "maxY": 497,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 90
   },
   "RSD_FEC": {
     "seriesNames": [
@@ -1477,7 +1665,7 @@ const chartsInfo = {
       "#B2979C"
     ],
     "unit": "PJ",
-    "maxY": 154,
+    "maxY": 160,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1491,13 +1679,10 @@ const chartsInfo = {
       "RSDELC",
       "RSDGAS",
       "RSDHET",
+      "RSDLPG",
       "RSDPEA",
       "RSDSOL",
-      "RSDWOO",
-      "RSDETH",
-      "RSDBDL",
-      "RSDKER",
-      "RSDLPG"
+      "RSDWOO"
     ],
     "colorScale": [
       "#6CF4EF",
@@ -1506,20 +1691,17 @@ const chartsInfo = {
       "#817323",
       "#3A8E78",
       "#DC496E",
+      "#09ECB5",
       "#1E083C",
       "#F99928",
-      "#B2979C",
-      "#BA3772",
-      "#7D790A",
-      "#B5E679",
-      "#09ECB5"
+      "#B2979C"
     ],
     "unit": "PJ",
-    "maxY": 14,
+    "maxY": 11,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
-    "height": 120
+    "height": 90
   },
   "RSD_WS-ATT_FuelCons": {
     "seriesNames": [
@@ -1639,7 +1821,7 @@ const chartsInfo = {
     "seriesNames": ["RSDELC", "RSDGAS", "RSDLPG"],
     "colorScale": ["#817323", "#3A8E78", "#09ECB5"],
     "unit": "PJ",
-    "maxY": 40,
+    "maxY": 34,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1649,7 +1831,7 @@ const chartsInfo = {
     "seriesNames": ["RSDSH_Att", "RSDSH_Det"],
     "colorScale": ["#12C557", "#ED8E69"],
     "unit": "PJ",
-    "maxY": 16,
+    "maxY": 5,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1679,7 +1861,7 @@ const chartsInfo = {
       "#8E1BA9"
     ],
     "unit": "PJ",
-    "maxY": 154,
+    "maxY": 160,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1689,7 +1871,7 @@ const chartsInfo = {
     "seriesNames": ["RSD_BLD-XXX_NRGSRV-CK", "RSD_BLD-XXX_NRGSRV-WS"],
     "colorScale": ["#9E62F4", "#8E1BA9"],
     "unit": "kt",
-    "maxY": 7673,
+    "maxY": 7400,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1698,14 +1880,14 @@ const chartsInfo = {
   "SUP_BIOGAS": {
     "seriesNames": [
       "SBIORGAS01",
+      "SBIORGAS02",
       "SBIORGAS03",
       "SBIORGAS05",
-      "SBIORGAS06",
-      "SBIORGAS02"
+      "SBIORGAS06"
     ],
-    "colorScale": ["#F63ACD", "#311C7E", "#AD6978", "#BA2376", "#E688AE"],
+    "colorScale": ["#F63ACD", "#E688AE", "#311C7E", "#AD6978", "#BA2376"],
     "unit": "PJ",
-    "maxY": 58,
+    "maxY": 28,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1735,37 +1917,7 @@ const chartsInfo = {
       "#6EB343"
     ],
     "unit": "PJ",
-    "maxY": 721,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 90
-  },
-  "SYS_FEC_Fuel_2": {
-    "seriesNames": [
-      "SEAI_BIOENERGY",
-      "SEAI_COAL",
-      "SEAI_ELECTRICITY",
-      "SEAI_HEAT",
-      "SEAI_HYDROGEN",
-      "SEAI_NATGAS",
-      "SEAI_OIL",
-      "SEAI_OTHER_RENEWABLES",
-      "SEAI_PEAT"
-    ],
-    "colorScale": [
-      "#18187B",
-      "#6341E2",
-      "#528B54",
-      "#471D27",
-      "#08F68A",
-      "#B0D2B1",
-      "#902FFE",
-      "#333EE6",
-      "#6EB343"
-    ],
-    "unit": "PJ",
-    "maxY": 721,
+    "maxY": 629,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1789,7 +1941,7 @@ const chartsInfo = {
       "#902FFE"
     ],
     "unit": "PJ",
-    "maxY": 678,
+    "maxY": 685,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1804,7 +1956,7 @@ const chartsInfo = {
     ],
     "colorScale": ["#18187B", "#B0D2B1", "#333EE6", "#6EB343"],
     "unit": "PJ",
-    "maxY": 597,
+    "maxY": 500,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1832,7 +1984,7 @@ const chartsInfo = {
       "#6EB343"
     ],
     "unit": "PJ",
-    "maxY": 773,
+    "maxY": 756,
     "minY": -6,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1852,7 +2004,7 @@ const chartsInfo = {
     "seriesNames": ["SH2PCELC_01", "SH2PDELC_01"],
     "colorScale": ["#7ACE1A", "#02D57C"],
     "unit": "PJ",
-    "maxY": 59,
+    "maxY": 26,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1867,9 +2019,9 @@ const chartsInfo = {
       "SRVCOA",
       "SRVELC",
       "SRVGAS",
+      "SRVHET",
       "SRVOIL",
-      "SRVSOL",
-      "SRVHET"
+      "SRVSOL"
     ],
     "colorScale": [
       "#C826B7",
@@ -1879,12 +2031,12 @@ const chartsInfo = {
       "#BD23C0",
       "#2A093B",
       "#79E9B9",
+      "#C7D8A0",
       "#77587E",
-      "#AEB022",
-      "#C7D8A0"
+      "#AEB022"
     ],
     "unit": "PJ",
-    "maxY": 33,
+    "maxY": 25,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1900,10 +2052,10 @@ const chartsInfo = {
       "SRVELC",
       "SRVELC-DC-C",
       "SRVGAS",
-      "SRVOIL",
-      "SRVSOL",
       "SRVHET",
-      "SRVLPG"
+      "SRVLPG",
+      "SRVOIL",
+      "SRVSOL"
     ],
     "colorScale": [
       "#C826B7",
@@ -1914,13 +2066,13 @@ const chartsInfo = {
       "#2A093B",
       "#19715B",
       "#79E9B9",
-      "#77587E",
-      "#AEB022",
       "#C7D8A0",
-      "#4ED2FF"
+      "#4ED2FF",
+      "#77587E",
+      "#AEB022"
     ],
     "unit": "PJ",
-    "maxY": 158,
+    "maxY": 138,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -1934,9 +2086,9 @@ const chartsInfo = {
       "SRVBIO",
       "SRVELC",
       "SRVGAS",
+      "SRVHET",
       "SRVOIL",
-      "SRVSOL",
-      "SRVHET"
+      "SRVSOL"
     ],
     "colorScale": [
       "#C826B7",
@@ -1945,16 +2097,26 @@ const chartsInfo = {
       "#BDFAB2",
       "#2A093B",
       "#79E9B9",
+      "#C7D8A0",
       "#77587E",
-      "#AEB022",
-      "#C7D8A0"
+      "#AEB022"
     ],
     "unit": "PJ",
-    "maxY": 29,
+    "maxY": 23,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
     "height": 90
+  },
+  "SRV_FEC_COK": {
+    "seriesNames": ["SRVELC", "SRVGAS", "SRVLPG"],
+    "colorScale": ["#2A093B", "#79E9B9", "#4ED2FF"],
+    "unit": "PJ",
+    "maxY": 34,
+    "minY": 0,
+    "xPeriods": xPeriods,
+    "xGridMarks": xGridMarks,
+    "height": 30
   },
   "SRV_FEC_DCs": {
     "seriesNames": ["SRVELC", "SRVELC-DC-C"],
@@ -2004,7 +2166,7 @@ const chartsInfo = {
       "#E2A0C9"
     ],
     "unit": "PJ",
-    "maxY": 231,
+    "maxY": 225,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -2034,7 +2196,7 @@ const chartsInfo = {
       "#E2A0C9"
     ],
     "unit": "PJ",
-    "maxY": 112,
+    "maxY": 75,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -2070,7 +2232,7 @@ const chartsInfo = {
       "#EE5257"
     ],
     "unit": "PJ",
-    "maxY": 103,
+    "maxY": 102,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -2090,7 +2252,7 @@ const chartsInfo = {
     "seriesNames": ["TRABDL", "TRADST"],
     "colorScale": ["#ADD682", "#C76AC0"],
     "unit": "PJ",
-    "maxY": 11,
+    "maxY": 13,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -2110,7 +2272,7 @@ const chartsInfo = {
     "seriesNames": ["TRAKER"],
     "colorScale": ["#637093"],
     "unit": "PJ",
-    "maxY": 63,
+    "maxY": 57,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
@@ -2120,7 +2282,7 @@ const chartsInfo = {
     "seriesNames": ["TRAPL", "TRAPM", "TRAPS"],
     "colorScale": ["#1EC952", "#02C644", "#DC4155"],
     "unit": "Bpkm",
-    "maxY": 115,
+    "maxY": 105,
     "minY": 0,
     "xPeriods": xPeriods,
     "xGridMarks": xGridMarks,
