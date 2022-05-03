@@ -1533,38 +1533,6 @@ const chartsInfo = {
     "xGridMarks": xGridMarks,
     "height": 30
   },
-  "RSD_WS-ATT_NCAP": {
-    "seriesNames": [
-      "R-HC_Att_ELC_HPN2",
-      "R-SC_Att_ELC_N1",
-      "R-SH_Att_ELC_N1",
-      "R-SW_Att_ELC_HPN1",
-      "R-SW_Att_GAS_HHPN1",
-      "R-SW_Att_GAS_N1",
-      "R-SW_Att_HET_N1",
-      "R-SW_Att_HET_N2",
-      "R-SW_Att_HVO_N1",
-      "R-WH_Att_ELC_N1"
-    ],
-    "colorScale": [
-      "#8E2595",
-      "#F7E125",
-      "#592D60",
-      "#3197A1",
-      "#EDE4A7",
-      "#CB5837",
-      "#98BBC5",
-      "#0361B8",
-      "#693529",
-      "#7383C7"
-    ],
-    "unit": "kUnits",
-    "maxY": 172,
-    "minY": 0,
-    "xPeriods": xPeriods,
-    "xGridMarks": xGridMarks,
-    "height": 90
-  },
   "RSD_WS-DET_NCAP": {
     "seriesNames": [
       "R-HC_Det_ELC_HPN2",
