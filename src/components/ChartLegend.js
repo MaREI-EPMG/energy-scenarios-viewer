@@ -4,7 +4,7 @@ import seriesTitles from "../specs/seriesTitles";
 
 function ChartLegend({ seriesNames, colorScale, itemsPerRow = 4 }) {
   return (
-    <Row xs="auto" style={{ maxWidth: 440 }}>
+    <Row xs="auto" style={{ maxWidth: 580 }}>
       {seriesNames.map((seriesName, idx) => (
         <Col className="chart-legend" key={idx}>
           <Row xs={2} className="align-items-center">
