@@ -320,7 +320,7 @@ const studyRoutes = [
     path: "/results/supply",
     component: Charts,
     props: {
-      charts: ["SUP_BIOETH", "SUP_BIOETH", "SUP_BIOGAS", "SUP_HYDROGEN"]
+      charts: ["SUP_BIODST", "SUP_BIOETH", "SUP_BIOGAS", "SUP_HYDROGEN"]
     }
   },
   {
