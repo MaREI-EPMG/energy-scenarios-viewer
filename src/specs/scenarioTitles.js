@@ -78,7 +78,21 @@ const scenarioTitles = {
   "Mitigation_SectoralCBs": "Sectoral CBs",
   "Mitigation_ReducedSectoralCBs": "Reduced Sectoral CBs",
   "Mitigation_CarbonBudget": "Whole System CB",
-  "Mitigation_ReducedCarbonBudget": "Reduced System CB"
+  "Mitigation_ReducedCarbonBudget": "Reduced System CB",
+  "Mitigation_SectoralCBs-TechOptimism": "Sectoral CBs (TO)",
+  "Mitigation_ReducedSectoralCBs-TechOptimism": "Reduced Sectoral CBs (TO)",
+  "Mitigation_CarbonBudget-TechOptimism": "Whole System CB (TO)",
+  "Mitigation_ReducedCarbonBudget-TechOptimism": "Reduced System CB (TO)",
+  "Mitigation_SectoralCBs-LED_Halfway": "Sectoral CBs (HL)",
+  "Mitigation_ReducedSectoralCBs-LED_Halfway": "Reduced Sectoral CBs (HL)",
+  "Mitigation_CarbonBudget-LED_Halfway": "Whole System CB (HL)",
+  "Mitigation_ReducedCarbonBudget-LED_Halfway": "Reduced System CB (HL)",
+  "Mitigation_SectoralCBs-LED_Halfway-TechOptimism": "Sectoral CBs (HL-TO)",
+  "Mitigation_ReducedSectoralCBs-LED_Halfway-TechOptimism":
+    "Reduced Sectoral CBs (HL-TO)",
+  "Mitigation_CarbonBudget-LED_Halfway-TechOptimism": "Whole System CB (HL-TO)",
+  "Mitigation_ReducedCarbonBudget-LED_Halfway-TechOptimism":
+    "Reduced System CB (HL-TO)"
 };
 
 export default scenarioTitles;

@@ -158,6 +158,84 @@ const studies = [
       {
         name: "Mitigation_ReducedCarbonBudget",
         variants: [{ name: "Mitigation_ReducedCarbonBudget", specs: null }]
+      },
+      {
+        name: "Mitigation_SectoralCBs-TechOptimism",
+        variants: [{ name: "Mitigation_SectoralCBs-TechOptimism", specs: null }]
+      },
+      {
+        name: "Mitigation_ReducedSectoralCBs-TechOptimism",
+        variants: [
+          { name: "Mitigation_ReducedSectoralCBs-TechOptimism", specs: null }
+        ]
+      },
+      {
+        name: "Mitigation_CarbonBudget-TechOptimism",
+        variants: [
+          { name: "Mitigation_CarbonBudget-TechOptimism", specs: null }
+        ]
+      },
+      {
+        name: "Mitigation_ReducedCarbonBudget-TechOptimism",
+        variants: [
+          { name: "Mitigation_ReducedCarbonBudget-TechOptimism", specs: null }
+        ]
+      },
+      {
+        name: "Mitigation_SectoralCBs-LED_Halfway",
+        variants: [{ name: "Mitigation_SectoralCBs-LED_Halfway", specs: null }]
+      },
+      {
+        name: "Mitigation_ReducedSectoralCBs-LED_Halfway",
+        variants: [
+          { name: "Mitigation_ReducedSectoralCBs-LED_Halfway", specs: null }
+        ]
+      },
+      {
+        name: "Mitigation_CarbonBudget-LED_Halfway",
+        variants: [{ name: "Mitigation_CarbonBudget-LED_Halfway", specs: null }]
+      },
+      {
+        name: "Mitigation_ReducedCarbonBudget-LED_Halfway",
+        variants: [
+          { name: "Mitigation_ReducedCarbonBudget-LED_Halfway", specs: null }
+        ]
+      },
+      {
+        name: "Mitigation_SectoralCBs-LED_Halfway-TechOptimism",
+        variants: [
+          {
+            name: "Mitigation_SectoralCBs-LED_Halfway-TechOptimism",
+            specs: null
+          }
+        ]
+      },
+      {
+        name: "Mitigation_ReducedSectoralCBs-LED_Halfway-TechOptimism",
+        variants: [
+          {
+            name: "Mitigation_ReducedSectoralCBs-LED_Halfway-TechOptimism",
+            specs: null
+          }
+        ]
+      },
+      {
+        name: "Mitigation_CarbonBudget-LED_Halfway-TechOptimism",
+        variants: [
+          {
+            name: "Mitigation_CarbonBudget-LED_Halfway-TechOptimism",
+            specs: null
+          }
+        ]
+      },
+      {
+        name: "Mitigation_ReducedCarbonBudget-LED_Halfway-TechOptimism",
+        variants: [
+          {
+            name: "Mitigation_ReducedCarbonBudget-LED_Halfway-TechOptimism",
+            specs: null
+          }
+        ]
       }
     ]
   }
